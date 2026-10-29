@@ -1,0 +1,32 @@
+{
+  "repository_url": "https://github.com/rajputnipun15/yotaflex-returns-engine",
+  "owner": "rajputnipun15",
+  "repository": "yotaflex-returns-engine",
+  "visibility": "public",
+  "private": false,
+  "default_branch": "main",
+  "verified_branch": "main",
+  "verified_content_commit": "347a5e64bd7b2b9f63a216baca38b1de019d9937",
+  "verification_method": "Unauthenticated GitHub API/raw requests plus remote Git ref; not inferred from local files.",
+  "remote_files_checked": 115,
+  "remote_tree_matches_local_commit": true,
+  "single_prompt_history": "docs/ai_prompt_history.md",
+  "excluded_private_paths_absent": true,
+  "readme": {
+    "local_links_and_anchors_checked": 35,
+    "broken": [],
+    "rendered_html_response_verified": true,
+    "response_content_type": "application/vnd.github.html+json; charset=utf-8",
+    "visual_browser_rendering_inspected": false
+  },
+  "full_archive": {
+    "public_download_bytes": 18134074,
+    "sha256": "ffe2d70371da172b3e128186d9070126b771d521565d075db73083556e5895ca",
+    "matches_local_checksums": true
+  },
+  "not_verified": [
+    "Company submission",
+    "Candidate-independent review"
+  ],
+  "client_date": "2026-10-29"
+}

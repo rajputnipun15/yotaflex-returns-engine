@@ -28,8 +28,9 @@
     "Initial sandbox ownership/config-lock failures resolved using exact project-scoped safe.directory and elevated local Git operations. No global safe-directory change.",
     "Initial check-ignore wrapper used Windows text-mode stdin; corrected to binary LF input and rechecked."
   ],
-  "publication_status": "No remote, account or public repository verified.",
+  "publication_status": "Initially blocked; user-provided public origin subsequently verified. See github_verification.json and final_submission_report.md.",
   "content_snapshot_commit": "36313a30f0f3f149741ea31252ae3398a4afa940",
   "clean_after_content_commit": true,
-  "noninteractive_github_credential_available": false
+  "noninteractive_github_credential_available": false,
+  "repository_url": "https://github.com/rajputnipun15/yotaflex-returns-engine"
 }

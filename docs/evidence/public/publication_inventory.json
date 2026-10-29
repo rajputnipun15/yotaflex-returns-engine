@@ -1,6 +1,6 @@
 {
-  "status": "REVIEWED_LOCAL_SCOPE_NOT_PROOF_OF_REMOTE_PUBLICATION",
-  "file_count": 115,
+  "status": "PUBLIC_CONTENT_SNAPSHOT_VERIFIED_DOCUMENTATION_UPDATE_PREPARED",
+  "file_count": 116,
   "files": [
     {
       "path": ".gitattributes",
@@ -109,8 +109,13 @@
     },
     {
       "path": "docs/evidence/public/git_preparation.json",
-      "bytes": 1349,
+      "bytes": 1511,
       "sha256": null
+    },
+    {
+      "path": "docs/evidence/public/github_verification.json",
+      "bytes": 1206,
+      "sha256": "4dcbacf93f4d91289093b80e37c88e098a4101e11960c374db057a3da67d74d4"
     },
     {
       "path": "docs/evidence/public/phase4_ground_truth.json",
@@ -139,7 +144,7 @@
     },
     {
       "path": "docs/final_submission_report.md",
-      "bytes": 7399,
+      "bytes": 8102,
       "sha256": null
     },
     {

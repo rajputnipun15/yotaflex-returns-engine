@@ -1,10 +1,13 @@
 # Final submission preparation report
 
 Report date: 29 October 2026 (Asia/Calcutta client date).
-Status: **local technical preparation verified; GitHub publication blocked**.
-The requested new public repository is `yotaflex-returns-engine`. Its connected
-owner, existence, URL and visibility have not been verified. No project has been
-submitted to the company.
+Status: **public repository verified**.
+Repository: [rajputnipun15/yotaflex-returns-engine](https://github.com/rajputnipun15/yotaflex-returns-engine).
+Owner: **rajputnipun15**. Visibility: **public**. Default and verified branch:
+**main**. The initial published commit verified independently was
+**347a5e64bd7b2b9f63a216baca38b1de019d9937**. This verification report update
+follows that commit; the hash identifies the verified publication snapshot, not
+the report update's own commit. No project submission to the company is claimed.
 
 ## What is prepared
 
@@ -81,33 +84,39 @@ check had reported those line endings as whitespace. No source reformatting was
 performed. Project-scoped trust and elevated local Git operations handled the
 sandbox's ownership/config-lock restrictions without changing global trust.
 
-The installed GitHub plugin has no exposed account, repository creation or push
-operations in this chat. The user requested reconnection, but a renewed tool
-check still did not expose those operations. The local GitHub CLI is unavailable.
-A noninteractive Git credential-manager lookup also found no usable GitHub
-credential; no credential values were printed or stored. A repository-owner
-account is not guessed from local Git identity. Therefore
-destination-name availability, creation, public visibility, remote URL and push
-cannot currently be verified.
+During initial preparation, the installed GitHub plugin exposed no account or
+repository operations, the GitHub CLI was unavailable and the noninteractive
+credential lookup found no usable credential. Initial publication was therefore
+blocked. The user subsequently supplied the repository URL after performing the
+manual publishing steps. The initial repository creation and push were not
+performed by this agent.
 
-## Manual connection/publication step if the integration remains unavailable
+The supplied public URL has now been checked using unauthenticated GitHub API/raw
+requests and the remote Git ref. The API reports `private: false`, visibility
+`public`, owner `rajputnipun15` and default branch `main`. The remote main ref
+matched the prepared local commit. Its 115-file tree and every Git blob ID matched
+the reviewed local snapshot, with no private prompt folder, local outputs or
+preparation directories present.
 
-Reconnect the GitHub integration for this chat and make its account/repository
-tools available. Then the connected owner and existing-name check can be performed
-before creating anything.
+The public README matched the prepared text; all 35 checked local links and
+anchors resolved in the published tree. GitHub returned rendered README HTML
+containing the project title. Browser visual appearance and client-rendered
+Mermaid layout were not independently inspected. The publicly downloaded full
+archive was 18,134,074 bytes and matched its recorded SHA-256. The repository
+contains the single consolidated prompt history, AI disclosure, source, tests,
+configuration, reports and selected evidence. Results are preserved in
+[GitHub verification evidence](evidence/public/github_verification.json).
 
-Alternatively, while signed into the intended GitHub account, check whether
-`OWNER/yotaflex-returns-engine` already exists. If it exists, stop; do not reuse
-or overwrite it. Otherwise create a **new empty public** repository with that
-name, without a README, license or other initialized files. Supply its actual
-owner and URL for verification before configuring a remote. No license choice is
-made by this project preparation.
+## Publication follow-up
 
-After the owner and empty destination are verified, the local push commands would
-be `git remote add origin https://github.com/OWNER/yotaflex-returns-engine.git`
-and `git push -u origin main`. These commands have **not** been run; OWNER is a
-placeholder, not a known connected account. Authentication may require user action.
-No force-push or history rewrite is permitted.
+The local origin is the user-provided HTTPS repository URL. The repository has
+already been published; do not create a duplicate repository or replace its
+history. This follow-up adds one verification-evidence file, bringing the reviewed
+inventory to 116 files, without changing source or tests. Any push of the update
+must be a normal fast-forward push to `main`, with no force-push. The original
+GitHub connector tools remain
+unavailable in this chat; public API and supported local Git operations provide
+the verification and update path. No license was invented or added.
 
 ## Data use and remaining assessment actions
 
