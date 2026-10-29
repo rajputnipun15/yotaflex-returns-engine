@@ -65,13 +65,28 @@ every possible sensitive value is absent.
 
 The original workspace had no Git repository. The final instruction authorizes
 initialization in that project root and a truthful initial publication snapshot.
-The reviewed inventory, staged content checks and resulting local commit will be
-recorded after staging. No unrelated directory or existing repository is reset.
+Git is now initialized in that project root on branch **main**. The verified
+content snapshot commit is **36313a30f0f3f149741ea31252ae3398a4afa940**,
+created with 115 explicitly reviewed files. This report's status update is a
+subsequent documentation commit; the hash above identifies the tested content
+snapshot, not a claim to be the later report commit's own hash.
+
+The staged file list exactly matched the explicit
+[publication inventory](evidence/public/publication_inventory.json). Staged blob
+bytes matched reviewed files, tested source hashes matched, the largest file was
+the 18.1 MB full archive, and no private paths or raw prompt folder were staged.
+Eight representative private paths were checked as ignored. The final whitespace
+check passed with Git configured for the preserved CRLF endings; the default
+check had reported those line endings as whitespace. No source reformatting was
+performed. Project-scoped trust and elevated local Git operations handled the
+sandbox's ownership/config-lock restrictions without changing global trust.
 
 The installed GitHub plugin has no exposed account, repository creation or push
 operations in this chat. The user requested reconnection, but a renewed tool
 check still did not expose those operations. The local GitHub CLI is unavailable.
-A repository-owner account is not guessed from local Git identity. Therefore
+A noninteractive Git credential-manager lookup also found no usable GitHub
+credential; no credential values were printed or stored. A repository-owner
+account is not guessed from local Git identity. Therefore
 destination-name availability, creation, public visibility, remote URL and push
 cannot currently be verified.
 

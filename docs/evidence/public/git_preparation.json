@@ -1,7 +1,7 @@
 {
   "repository_initialized": true,
   "branch": "main",
-  "staged_content_files_checked": 113,
+  "staged_content_files_checked": 115,
   "staged_blobs_match_reviewed_working_files": true,
   "source_tests_scripts_configuration_unchanged": true,
   "single_public_prompt_history": "docs/ai_prompt_history.md",
@@ -28,5 +28,8 @@
     "Initial sandbox ownership/config-lock failures resolved using exact project-scoped safe.directory and elevated local Git operations. No global safe-directory change.",
     "Initial check-ignore wrapper used Windows text-mode stdin; corrected to binary LF input and rechecked."
   ],
-  "publication_status": "No remote, account or public repository verified."
+  "publication_status": "No remote, account or public repository verified.",
+  "content_snapshot_commit": "36313a30f0f3f149741ea31252ae3398a4afa940",
+  "clean_after_content_commit": true,
+  "noninteractive_github_credential_available": false
 }
