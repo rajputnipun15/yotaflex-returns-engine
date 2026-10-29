@@ -1,0 +1,32 @@
+{
+  "repository_initialized": true,
+  "branch": "main",
+  "staged_content_files_checked": 113,
+  "staged_blobs_match_reviewed_working_files": true,
+  "source_tests_scripts_configuration_unchanged": true,
+  "single_public_prompt_history": "docs/ai_prompt_history.md",
+  "largest_staged_file_bytes": 18134074,
+  "private_path_screen_flags": [],
+  "ignore_samples": {
+    "selected_public_paths_not_ignored": 113,
+    "private_examples_ignored": 8
+  },
+  "diff_check": {
+    "default_exit_code": 2,
+    "reason": "Preserved CRLF line endings were treated as whitespace by default.",
+    "crlf_aware_command": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--cached",
+      "--check"
+    ],
+    "crlf_aware_exit_code": 0
+  },
+  "environment_notes": [
+    "Initial sandbox ownership/config-lock failures resolved using exact project-scoped safe.directory and elevated local Git operations. No global safe-directory change.",
+    "Initial check-ignore wrapper used Windows text-mode stdin; corrected to binary LF input and rechecked."
+  ],
+  "publication_status": "No remote, account or public repository verified."
+}

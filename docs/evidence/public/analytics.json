@@ -1,0 +1,450 @@
+{
+  "amounts_minor": {
+    "failed_paid": 0,
+    "original_order_line_paid": 1510023317,
+    "refund_obligations": 102331026,
+    "successful_payouts": 97710112
+  },
+  "audit_status": "PASS",
+  "counts": {
+    "ActionAttempt": 7591,
+    "Inspection": 5454,
+    "InventoryDisposition": 5454,
+    "InventoryMovement": 5106,
+    "Order": 30000,
+    "Refund": 5281,
+    "RefundObligation": 4812,
+    "ReturnLine": 8000,
+    "ReturnRequest": 5000,
+    "ReturnShipment": 4194
+  },
+  "groups": {
+    "authorization_decisions": {
+      "ALLOWED": 6414,
+      "BLOCKED": 1177
+    },
+    "authorization_reason_codes": {
+      "CATEGORY_EXCLUDED": 399,
+      "ELIGIBLE": 6363,
+      "NO_REMAINING_QUANTITY": 248,
+      "PARTIAL_REMAINING_QUANTITY": 51,
+      "WINDOW_EXPIRED": 530
+    },
+    "disposition_actions": {
+      "QUARANTINE": 135,
+      "REFURBISH": 865,
+      "RESTOCK": 4081,
+      "SCRAP": 373
+    },
+    "disposition_states": {
+      "ACCEPTED": 5454
+    },
+    "inspection_conditions": {
+      "IRREPARABLE": 373,
+      "REPAIRABLE": 865,
+      "SELLABLE": 4081,
+      "UNSAFE": 135
+    },
+    "movement_units_by_action": {
+      "QUARANTINE": 178,
+      "REFURBISH": 1081,
+      "RESTOCK": 4965,
+      "SCRAP": 452
+    },
+    "refund_attempt_states": {
+      "FAILED": 469,
+      "REQUESTED": 240,
+      "SUCCEEDED": 4572
+    },
+    "request_lifecycle_states": {
+      "APPROVED": 207,
+      "CLOSED": 2717,
+      "INSPECTED": 760,
+      "IN_TRANSIT": 244,
+      "PARTIALLY_APPROVED": 17,
+      "RECEIVED": 273,
+      "REJECTED": 526,
+      "REQUESTED": 256
+    },
+    "request_resolution": {
+      "EXCHANGE": 600,
+      "REFUND": 4400
+    },
+    "return_line_customer_reasons": {
+      "CHANGED_MIND": 2253,
+      "DAMAGE": 1215,
+      "NOT_AS_EXPECTED": 1514,
+      "SIZE": 3018
+    },
+    "return_line_states": {
+      "APPROVED": 349,
+      "INSPECTED": 1146,
+      "PARTIALLY_APPROVED": 3,
+      "RECEIVED": 420,
+      "REJECTED": 1177,
+      "REQUESTED": 409,
+      "SETTLED": 4116,
+      "SHIPPED": 380
+    },
+    "shipment_states": {
+      "DELIVERED": 3933,
+      "MISSING": 261
+    }
+  },
+  "invariant_denominators": {
+    "non_success_attempts": 709,
+    "restock_movements": 3816,
+    "successful_payment_keys": 4572
+  },
+  "invariant_violations": {
+    "duplicate_success_keys": 0,
+    "invalid_restock_movement": 0,
+    "non_success_paid": 0,
+    "obligation_overpaid": 0
+  },
+  "phase4": [
+    {
+      "decision": "BLOCKED",
+      "final": {
+        "events": 15,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 13,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "NO_REMAINING_QUANTITY",
+      "scenario_id": "quantity_negative"
+    },
+    {
+      "decision": "ALLOWED",
+      "final": {
+        "events": 17,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 13,
+        "paid_minor": 0,
+        "reserved_units": 1,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "PARTIAL_REMAINING_QUANTITY",
+      "scenario_id": "quantity_control"
+    },
+    {
+      "decision": "BLOCKED",
+      "final": {
+        "events": 24,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "initial": {
+        "events": 24,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "reason": "REFUND_SUCCESS_GUARD",
+      "scenario_id": "excess_negative"
+    },
+    {
+      "decision": "ALLOWED",
+      "final": {
+        "events": 25,
+        "paid_minor": 200,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 2
+      },
+      "initial": {
+        "events": 24,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "reason": "REFUND_SUCCEEDED",
+      "scenario_id": "excess_control"
+    },
+    {
+      "decision": "BLOCKED",
+      "final": {
+        "events": 18,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 18,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "MOVEMENT_REQUIRES_ACCEPTED_DECISION",
+      "scenario_id": "inventory_negative"
+    },
+    {
+      "decision": "ALLOWED",
+      "final": {
+        "events": 24,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 2,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 23,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "RESTOCK_POSTED",
+      "scenario_id": "inventory_control"
+    },
+    {
+      "decision": "BLOCKED",
+      "final": {
+        "events": 9,
+        "paid_minor": 0,
+        "reserved_units": 0,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 7,
+        "paid_minor": 0,
+        "reserved_units": 0,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "WINDOW_EXPIRED",
+      "scenario_id": "late_negative"
+    },
+    {
+      "decision": "ALLOWED",
+      "final": {
+        "events": 11,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "initial": {
+        "events": 7,
+        "paid_minor": 0,
+        "reserved_units": 0,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "ELIGIBLE",
+      "scenario_id": "late_control"
+    },
+    {
+      "decision": "BLOCKED",
+      "final": {
+        "events": 24,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "initial": {
+        "events": 24,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "reason": "DUPLICATE_PAYMENT_KEY",
+      "scenario_id": "duplicate_negative"
+    },
+    {
+      "decision": "ALLOWED",
+      "final": {
+        "events": 25,
+        "paid_minor": 100,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 1
+      },
+      "initial": {
+        "events": 24,
+        "paid_minor": 0,
+        "reserved_units": 2,
+        "restocked_units": 0,
+        "successful_refunds": 0
+      },
+      "reason": "REFUND_SUCCEEDED",
+      "scenario_id": "duplicate_control"
+    }
+  ],
+  "phase4_integrity": {
+    "checks": [
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "quantity_negative",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "quantity_control",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "excess_negative",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "excess_control",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "inventory_negative",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "inventory_control",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "late_negative",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "late_control",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "duplicate_negative",
+        "sqlite_integrity": true
+      },
+      {
+        "decision_and_reason": true,
+        "evaluation": true,
+        "event_history": true,
+        "expected_effects": true,
+        "foreign_keys": true,
+        "observed_balances_match_database": true,
+        "preconditions": true,
+        "references": true,
+        "scenario_id": "duplicate_control",
+        "sqlite_integrity": true
+      }
+    ],
+    "coverage": true,
+    "logical_database_sha256": {
+      "duplicate_control": "17e8e5731843ebc43bd9e9a565c08a899985ffacb12fcd294f1e0947f15b35c5",
+      "duplicate_negative": "4cc31f3bd29210bc198d6f12fc4846d6244529451a186cb8fbd5223420fda86e",
+      "excess_control": "05aa7c3a2024a9aa7a756612f7ee9459e1970f321b77acec051ab69113d6cf6f",
+      "excess_negative": "3007a98ba4d6d58198a4da0f66ab2ed1e0f189be97f24620a0f3a01e54e0a7f3",
+      "inventory_control": "dc6dfd5bc768b65c2dd2252920ae61d61ad2a796409719b31d89939ebc08341f",
+      "inventory_negative": "b91aeed8e362f0aeb4d2975ed17c8614e6d1cdcf5279a8fcfb5dd7fd397ac9af",
+      "late_control": "7d082e40d1bbb1436f4e5263c019e40e9d50db291c98a18edeb04a0b581dac4b",
+      "late_negative": "f54c2c92ba4ac45d8c15a92c75c030770d3c3a4215926b715d28cf5fcb21dbde",
+      "quantity_control": "0608912bfc7ae55de682c8a44f689cfb2fab55bd07a2fe5e6613de3cb730dc13",
+      "quantity_negative": "ffa06a1a20739176b7b9766788693a368122916bdb6e157b3c8400304a88641f"
+    },
+    "pass": true
+  },
+  "queries": {
+    "authorization_decisions": "SELECT decision,COUNT(*) FROM ActionAttempt WHERE action='AUTHORIZE' GROUP BY decision ORDER BY decision",
+    "authorization_reason_codes": "SELECT reason_code,COUNT(*) FROM ActionAttempt WHERE action='AUTHORIZE' GROUP BY reason_code ORDER BY reason_code",
+    "disposition_actions": "SELECT action,COUNT(*) FROM InventoryDisposition GROUP BY action ORDER BY action",
+    "disposition_states": "SELECT state,COUNT(*) FROM InventoryDisposition GROUP BY state ORDER BY state",
+    "inspection_conditions": "SELECT condition,COUNT(*) FROM Inspection GROUP BY condition ORDER BY condition",
+    "movement_units_by_action": "SELECT d.action,SUM(m.quantity) FROM InventoryMovement m JOIN InventoryDisposition d ON d.id=m.disposition_id GROUP BY d.action ORDER BY d.action",
+    "refund_attempt_states": "SELECT state,COUNT(*) FROM Refund GROUP BY state ORDER BY state",
+    "request_lifecycle_states": "SELECT state,COUNT(*) FROM ReturnRequest GROUP BY state ORDER BY state",
+    "request_resolution": "SELECT resolution,COUNT(*) FROM ReturnRequest GROUP BY resolution ORDER BY resolution",
+    "return_line_customer_reasons": "SELECT reason_code,COUNT(*) FROM ReturnLine GROUP BY reason_code ORDER BY reason_code",
+    "return_line_states": "SELECT state,COUNT(*) FROM ReturnLine GROUP BY state ORDER BY state",
+    "shipment_states": "SELECT state,COUNT(*) FROM ReturnShipment GROUP BY state ORDER BY state"
+  },
+  "source": "outputs/full_final/returns.db"
+}

@@ -1,0 +1,747 @@
+{
+  "counts": {
+    "Implemented and verified": 61,
+    "Implemented but not independently verified": 5,
+    "Not implemented": 4,
+    "Partially implemented": 22
+  },
+  "total": 92,
+  "requirements": [
+    {
+      "id": "U01",
+      "requirement": "Full purchase-to-return eligibility, authorization, shipment, inspection, refund, disposition, exceptions and traceability",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/policy.py; src/returns_engine/schema.py",
+      "status": "Partially implemented",
+      "actual_result": "Generated refund and disposition workflows and isolated exception guards exist; exchange replacement and durable rejected SQL attempt audit remain incomplete.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U02",
+      "requirement": "Exactly 30,000 orders, 5,000 requests, 8,000 return lines at full scale; not total table rows",
+      "implementation": "src/returns_engine/config.py; src/returns_engine/generator.py; outputs/full_final/returns.db",
+      "status": "Implemented and verified",
+      "actual_result": "Current full database has 30,000 orders, 5,000 requests and 8,000 lines, matched to exports and manifest.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U03",
+      "requirement": "Seed 20261022; configurable starter/full scales share generator",
+      "implementation": "src/returns_engine/config.py; src/returns_engine/generator.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_full_counts_and_shared_pipeline_selection (test_generator.GeneratorTests.test_full_counts_and_shared_pipeline_selection) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U04",
+      "requirement": "Valid baseline first; masters/parents before dependents; valid child IDs except labelled negatives",
+      "implementation": "src/returns_engine/generator.py; scripts/phase4_scenarios.py",
+      "status": "Implemented and verified",
+      "actual_result": "Full baseline CSV/JSON/DB parity and FK checks passed; separate Phase 4 fixtures have valid references.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U05",
+      "requirement": "Derived values and outcomes calculated from source facts and documented rules",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/money.py; src/returns_engine/validation.py",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: Generated baseline derivations were checked; unfinished workflows have not been evaluated. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U06",
+      "requirement": "All ten named core entities retained",
+      "implementation": "src/returns_engine/model.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_empty_schema_and_idempotent_initialize (test_foundation.FoundationTests.test_empty_schema_and_idempotent_initialize) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U07",
+      "requirement": "Every entity has PK; every relationship FK/cardinality/optional links",
+      "implementation": "src/returns_engine/model.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_every_fk_is_indexed_and_all_pks_are_required (test_foundation.FoundationTests.test_every_fk_is_indexed_and_all_pks_are_required) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U08",
+      "requirement": "Effective dates, lifecycle states and explicit state-change history",
+      "implementation": "src/returns_engine/events.py; model.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_event_history_atomic_and_append_only (test_foundation.FoundationTests.test_event_history_atomic_and_append_only) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U09",
+      "requirement": "Bridge genuine N:M relationships and validate joins",
+      "implementation": "src/returns_engine/model.py; src/returns_engine/validation.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_split_shipments_and_multiple_inspection_batches (test_foundation.FoundationTests.test_split_shipments_and_multiple_inspection_batches) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U10",
+      "requirement": "Explain partial returns, multiple shipments, inspections and refund retries before schema implementation",
+      "implementation": "docs/project/architecture.md; docs/project/architecture.md",
+      "status": "Implemented but not independently verified",
+      "actual_result": "Inherited closure finding: The historical Phase 1 design is documented, but the current workspace has no Git history to independently prove its timing. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U11",
+      "requirement": "Exact ORD/RMA/RMAL/RTS/REF formats, full parent embedded in return-line ID, prescribed zero padding",
+      "implementation": "src/returns_engine/ids.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_required_id_examples_and_bounds (test_foundation.FoundationTests.test_required_id_examples_and_bounds) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U12",
+      "requirement": "Immutable deterministic IDs equal across CSV/JSON/SQL; separately proposed other prefixes",
+      "implementation": "src/returns_engine/exports.py; ids.py",
+      "status": "Implemented and verified",
+      "actual_result": "Current full CSV/JSON/DB rows match; complete SQL restore is inherited Phase 3 evidence tied to matching seed hash.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U13",
+      "requirement": "Generate prices, quantities, discounts and dates; configurable return windows/category exclusions",
+      "implementation": "src/returns_engine/config.py; src/returns_engine/generator.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_starter_and_custom_config_counts (test_generator.GeneratorTests.test_starter_and_custom_config_counts) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U14",
+      "requirement": "Requests reference purchases, approve eligible quantities",
+      "implementation": "src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_repeated_approvals_do_not_overreserve (test_generator.ApprovalTests.test_repeated_approvals_do_not_overreserve) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U15",
+      "requirement": "Shipments and inspections precede calculated refunds and disposition",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_preinspection_restock_and_refund_cannot_post (test_foundation.FoundationTests.test_preinspection_restock_and_refund_cannot_post) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U16",
+      "requirement": "Refund uses paid price, discounts, fees and documented tax assumptions",
+      "implementation": "src/returns_engine/money.py; src/returns_engine/generator.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U17",
+      "requirement": "Disposition supports restock/refurbish/quarantine/scrap",
+      "implementation": "src/returns_engine/generator.py; model.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_disposition_is_not_inventory_movement (test_foundation.FoundationTests.test_disposition_is_not_inventory_movement) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U18",
+      "requirement": "Cover partial returns, late requests, damage, exchange, missing shipment and duplicate attempts",
+      "implementation": "src/returns_engine/generator.py; scripts/phase4_scenarios.py",
+      "status": "Partially implemented",
+      "actual_result": "Full baseline has ordinary edge cases; duplicate success is attempted in a separate labelled fixture, not injected into full baseline.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U19",
+      "requirement": "Synthetic data sufficient; any external source needs URL/version/date/license/attribution/transforms/discards; no confidential data/access bypass",
+      "implementation": "outputs/full_final/source_manifest.json; source-material records retained privately",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U20",
+      "requirement": "Block quantity above purchased quantity",
+      "implementation": "src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Original purchase 2, request 3: blocked QTY_EXCEEDS_PURCHASED; no authorization created.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U21",
+      "requirement": "Block excessive refund",
+      "implementation": "src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Original payment/entitlement 200, attempted 201: SQL blocked and event rolled back; remaining-entitlement fixture also blocked.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U22",
+      "requirement": "Block restock before inspection",
+      "implementation": "src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "No finalized inspection: movement blocked; finalized SELLABLE control moved two units.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U23",
+      "requirement": "Block out-of-window return without override",
+      "implementation": "src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Late request blocked; inclusive deadline control allowed. Override authority unsupported.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U24",
+      "requirement": "Block duplicate refund",
+      "implementation": "src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Second successful key blocked; retry after FAILED zero-paid attempt succeeded.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U25",
+      "requirement": "Separate invalid attempted action, detected/blocked decision and completed business transaction",
+      "implementation": "src/returns_engine/model.py; scripts/phase4_scenarios.py",
+      "status": "Partially implemented",
+      "actual_result": "Authorization attempts are durable; rejected refund/inventory SQL attempts only appear in separate observations.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U26",
+      "requirement": "Stable negative ID/type/affected reference/expected outcome/injection method",
+      "implementation": "outputs/anomalies/phase4_final/ground_truth.json; scripts/phase4_scenarios.py",
+      "status": "Partially implemented",
+      "actual_result": "Five labelled scenarios have stable identifiers and expectations. The assessment-specific above-original-purchase and above-original-paid probes passed separately, but those two variants are not in the labelled Phase 4 truth catalogue.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U27",
+      "requirement": "Separate truth artifact; never leak labels into decision inputs",
+      "implementation": "outputs/anomalies/phase4_final/ground_truth.json; scripts/phase4_scenarios.py",
+      "status": "Implemented and verified",
+      "actual_result": "Separate ground truth; executor run_one does not accept ground truth, decision evaluated against fixture rules.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U28",
+      "requirement": "Validate PK uniqueness/FK integrity/enums/required values/types",
+      "implementation": "src/returns_engine/validation.py; src/returns_engine/schema.py",
+      "status": "Partially implemented",
+      "actual_result": "Phase 5 suite: test_pk_uniqueness_required_fields_and_enums (test_foundation.FoundationTests.test_pk_uniqueness_required_fields_and_enums) ... ok. Inherited closure finding: All retained baselines passed structure checks; FK failure diagnostics were fixed, while broader adversarial corruption remains unverified. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U29",
+      "requirement": "Validate date ordering and lifecycle transitions",
+      "implementation": "src/returns_engine/validation.py; src/returns_engine/events.py",
+      "status": "Partially implemented",
+      "actual_result": "Phase 5 suite: test_invalid_event_transition_time_and_reference (test_foundation.FoundationTests.test_invalid_event_transition_time_and_reference) ... ok. Inherited closure finding: Dates and history were measured for all baselines; exhaustive malformed-data chronology coverage remains future work. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U30",
+      "requirement": "Reconcile arithmetic, order discounts/tax, refunds and refundable balances",
+      "implementation": "src/returns_engine/validation.py; src/returns_engine/money.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U31",
+      "requirement": "Validate duplicates and quantities including prior returns",
+      "implementation": "src/returns_engine/validation.py; src/returns_engine/policy.py; src/returns_engine/schema.py",
+      "status": "Partially implemented",
+      "actual_result": "Phase 5 suite: test_repeated_approvals_do_not_overreserve (test_generator.ApprovalTests.test_repeated_approvals_do_not_overreserve) ... ok. Inherited closure finding: Cumulative reservations and payout guards are tested; independent detection of deliberately corrupted duplicate-payout data remains open. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U32",
+      "requirement": "Validate inspection/disposition consistency",
+      "implementation": "src/returns_engine/validation.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_preinspection_restock_and_refund_cannot_post (test_foundation.FoundationTests.test_preinspection_restock_and_refund_cannot_post) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U33",
+      "requirement": "Measured summary: numerator, denominator, interpretation per metric; no invented percentages/PASS",
+      "implementation": "src/returns_engine/validation.py; docs/project/analytics_summary.md",
+      "status": "Partially implemented",
+      "actual_result": "Baseline metrics and documented denominators are measured; no independent detector, precision or recall claim.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U34",
+      "requirement": "Deterministic policies and explicit reason codes",
+      "implementation": "src/returns_engine/policy.py; src/returns_engine/config.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_window_boundary_exclusions_and_override_authority (test_generator.ApprovalTests.test_window_boundary_exclusions_and_override_authority) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U35",
+      "requirement": "Dictionary every field in ten entities: name/type/required/allowed/unit/unique/PK-FK/rule/meaning",
+      "implementation": "docs/data_dictionary.md; src/returns_engine/dictionary.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_dictionary_matches_every_actual_column (test_foundation.FoundationTests.test_dictionary_matches_every_actual_column) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U36",
+      "requirement": "Document cardinalities/nullability/states/transitions/effective dates/rounding/precision/timezone/policies",
+      "implementation": "docs/data_dictionary.md; docs/project/architecture.md; docs/project/business_rules.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U37",
+      "requirement": "Do not invent official policies; configurable assumptions labelled",
+      "implementation": "config/default.json; docs/project/assumptions.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U38",
+      "requirement": "CSV/JSON/SQL schema and seed exports",
+      "implementation": "src/returns_engine/exports.py; outputs/full_final/",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_executable_sql_snapshot_restores_history_guards_and_values (test_generator.GeneratorTests.test_executable_sql_snapshot_restores_history_guards_and_values) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U39",
+      "requirement": "Source manifest, machine-readable summary, human-readable report, dictionary and README",
+      "implementation": "src/returns_engine/exports.py; README.md; docs/project/analytics_summary.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U40",
+      "requirement": "Document generator and reproducibility commands",
+      "implementation": "README.md; src/returns_engine/__main__.py",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U41",
+      "requirement": "Generate same configuration twice; compare row counts/checksums",
+      "implementation": "src/returns_engine/pipeline.py; outputs/full_final/; outputs/full_repeat/",
+      "status": "Implemented and verified",
+      "actual_result": "Retained full final/repeat canonical files match 50/50; historical source identity unavailable.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U42",
+      "requirement": "No volatile timestamps/uncontrolled randomness/unstable ordering in business data; separate run metadata",
+      "implementation": "src/returns_engine/generator.py; exports.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_same_seed_all_canonical_files_equal (test_generator.GeneratorTests.test_same_seed_all_canonical_files_equal) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U43",
+      "requirement": "Record actual AI prompts and tool identity; no fabricated prompts/timestamps",
+      "implementation": "docs/ai_prompt_history.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: All five available user attachments are recorded exactly; prompts from other sessions/tools are not independently knowable. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U44",
+      "requirement": "Disclose assistance, actual candidate review/changes/independent verification/limitations",
+      "implementation": "docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: AI assistance is disclosed honestly; candidate review, changes and independently executed verification remain unrecorded. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U45",
+      "requirement": "Prepare dedicated public GitHub repo and meaningful commits; no publishing/push/remote/credentials without explicit authorization",
+      "implementation": "Historical Phase 5 Git state; see docs/final_submission_report.md for current authorized preparation",
+      "status": "Not implemented",
+      "actual_result": "Inherited closure finding: There is no actual project Git repository, remote or public submission; publication requires user authorization. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U46",
+      "requirement": "Inspect existing workspace before replacements; preserve useful work/conflicts",
+      "implementation": "local source-availability record (not published); docs/project/phase3_closure.md",
+      "status": "Implemented but not independently verified",
+      "actual_result": "Inherited closure finding: The earlier empty-workspace inspection is reported historically; no Git history independently establishes the former state. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U47",
+      "requirement": "Evaluate lightweight architecture and refine repo; avoid unjustified UI/hosting/APIs/cloud/dependencies/empty files",
+      "implementation": "docs/project/architecture.md; pyproject.toml",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U48",
+      "requirement": "Verify deadline from original company message; do not assume 72 hours",
+      "implementation": "local source-availability record (not published); original send timestamp unavailable",
+      "status": "Not implemented",
+      "actual_result": "Inherited closure finding: The original company send timestamp and timezone remain unavailable, so the absolute deadline is unverified. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U49",
+      "requirement": "Phase 1 only: source review, register, assumptions, model, architecture, risks, phased gates, spec, actual prompt; report before Phase 2",
+      "implementation": "PROJECT_SPEC.md; docs/; docs/ai_prompt_history.md and docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: The initial analysis was reported before Phase 2, but primary sources were absent during that initial phase. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "U50",
+      "requirement": "Register ID/requirement/source/class/location/verification/acceptance/status; only approved statuses; separate explicit/submission/design/policy",
+      "implementation": "docs/project/requirements_matrix.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S01",
+      "requirement": "Working executable code and clear execution instructions, evidence",
+      "implementation": "README.md; src/returns_engine/; docs/evidence/",
+      "status": "Partially implemented",
+      "actual_result": "Local executable commands were rerun; submission packaging and candidate-independent review remain open.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S02",
+      "requirement": "Public GitHub repository and meaningful commits",
+      "implementation": "Historical Phase 5 Git state; see docs/final_submission_report.md",
+      "status": "Not implemented",
+      "actual_result": "Inherited closure finding: Git status, branch, log, remote and ls-files all returned 128 because no project Git repository exists. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S03",
+      "requirement": "AI prompt history, transparent disclosure and visible reasoning",
+      "implementation": "docs/ai_prompt_history.md; docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: Available prompt history/disclosure exists; actual candidate review and contributions are not recorded. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S04",
+      "requirement": "Individual work, AI permitted, candidate must explain solution",
+      "implementation": "docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: No other-person implementation help was used in this session; candidate ownership and explanation have not been demonstrated. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S05",
+      "requirement": "Hosted demo and automated suite reported optional; clear execution and verification required",
+      "implementation": "README.md; tests/",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: A hosted demo is optional and tests are provided; complete assessment verification remains unfinished. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "D01",
+      "requirement": "Standard-library Python + SQLite + CLI; focused automated tests",
+      "implementation": "src/returns_engine/; tests/",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "D02",
+      "requirement": "Quantity-bearing bridges and append-only events",
+      "implementation": "src/returns_engine/schema.py; src/returns_engine/events.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_split_shipments_and_multiple_inspection_batches (test_foundation.FoundationTests.test_split_shipments_and_multiple_inspection_batches) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "D03",
+      "requirement": "Canonical portable artifact hashes rather than SQLite file-byte comparison",
+      "implementation": "src/returns_engine/exports.py; src/returns_engine/pipeline.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_actual_rehash_detects_artifact_tampering (test_generator.GeneratorTests.test_actual_rehash_detects_artifact_tampering) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "D04",
+      "requirement": "Proposed starter 300/50/80 and fixed simulation clock",
+      "implementation": "src/returns_engine/config.py; config/default.json",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_starter_and_custom_config_counts (test_generator.GeneratorTests.test_starter_and_custom_config_counts) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A01",
+      "requirement": "30 calendar days inclusive from delivery; Asia/Calcutta business-day interpretation",
+      "implementation": "src/returns_engine/config.py; src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_window_boundary_exclusions_and_override_authority (test_generator.ApprovalTests.test_window_boundary_exclusions_and_override_authority) ... ok. Inherited closure finding: The 30-day example and configurable category windows are synthetic assumptions, not verified official policy. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A02",
+      "requirement": "Synthetic INR, minor units, HALF_UP; zero default tax/fees; unit allocation",
+      "implementation": "src/returns_engine/money.py; src/returns_engine/config.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok. Inherited closure finding: Integer money, HALF_UP primitives, zero defaults and a nonzero tax/fee test are verified as synthetic assumptions. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A03",
+      "requirement": "Approve/reserve; release only unconsumed cancellation quantities",
+      "implementation": "src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_cancelled_unused_authorization_releases_quantity (test_generator.ApprovalTests.test_cancelled_unused_authorization_releases_quantity) ... ok. Inherited closure finding: Serialized reservations and restricted cancellation were exercised; amendments and supersession are not implemented. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A04",
+      "requirement": "Refund after accepted inspection; damage eligibility distinct from resale condition",
+      "implementation": "src/returns_engine/schema.py; src/returns_engine/generator.py",
+      "status": "Partially implemented",
+      "actual_result": "Phase 5 suite: test_preinspection_restock_and_refund_cannot_post (test_foundation.FoundationTests.test_preinspection_restock_and_refund_cannot_post) ... ok. Inherited closure finding: Finalized inspection precedes refunds in baseline; no independent inspection-acceptance/rejection decision is modeled. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A05",
+      "requirement": "Exchange emits a pending-replacement observation and no cash refund; missing shipments remain exceptions.",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/events.py",
+      "status": "Partially implemented",
+      "actual_result": "Phase 5 suite: test_rejected_pending_and_exchanges_have_no_unauthorized_cash (test_generator.GeneratorTests.test_rejected_pending_and_exchanges_have_no_unauthorized_cash) ... ok. Inherited closure finding: Pending replacement and missing shipment are recorded; actual exchange replacement fulfillment is not implemented. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "A06",
+      "requirement": "Synthetic category exclusions are configurable; PERSONAL_CARE is excluded by default, and overrides are unsupported.",
+      "implementation": "src/returns_engine/config.py; src/returns_engine/policy.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_window_boundary_exclusions_and_override_authority (test_generator.ApprovalTests.test_window_boundary_exclusions_and_override_authority) ... ok. Inherited closure finding: Current synthetic config excludes PERSONAL_CARE and denies overrides; neither is asserted as company policy. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S06",
+      "requirement": "Deadline is original recorded send timestamp plus 72 hours in its timezone; artifact timestamps used; latest repo at deadline evaluated; keep repo editable",
+      "implementation": "local source-availability record (not published)",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: The 72-hour rule is documented, but the original send time and a public editable repository are missing. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S07",
+      "requirement": "Submit dedicated public repository link from recruitment email following original instructions",
+      "implementation": "No submission performed",
+      "status": "Not implemented",
+      "actual_result": "Inherited closure finding: No public repository or authorized email submission exists. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S08",
+      "requirement": "Identifiable artifact directory; no fixed format; responses optional; disclose prompt-export limitations",
+      "implementation": "outputs/; docs/evidence/; docs/ai_prompt_history.md and docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: Available docs/ai_prompt_history.md and docs/ai_usage_disclosure.mdartifacts are recorded; any external AI-tool prompts or unavailable session history require candidate confirmation. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S09",
+      "requirement": "No implementation help from other people; understand dependencies; free/local services and avoid huge/slow dependencies",
+      "implementation": "README.md; docs/ai_usage_disclosure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: The local standard-library solution is inspected; individual understanding has not been independently demonstrated. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S10",
+      "requirement": "No imported complete solution/core implementation; small snippets/dependencies lawful with attribution",
+      "implementation": "docs/ai_usage_disclosure.md",
+      "status": "Implemented but not independently verified",
+      "actual_result": "Inherited closure finding: No imported complete solution is disclosed and dependencies were inspected, but full independent authorship verification is unavailable. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "S11",
+      "requirement": "Document assumptions/deviations/incomplete work and exclude secrets/personal/sensitive/unauthorized proprietary data",
+      "implementation": "docs/project/assumptions.md; docs/project/phase3_closure.md",
+      "status": "Partially implemented",
+      "actual_result": "Inherited closure finding: Assumptions and limitations are documented; public-submission secret/personal-data review and path sanitization remain outstanding. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-01",
+      "requirement": "Inspect existing spec/register/code, preserve work and actual prompts",
+      "implementation": "local source-availability record (not published); docs/ai_prompt_history.md and docs/ai_usage_disclosure.md",
+      "status": "Implemented but not independently verified",
+      "actual_result": "Inherited closure finding: Phase 2 inspection/prompt preservation are documented historically; no Git history proves the old workspace state. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-02",
+      "requirement": "Implement all ten entities, useful support tables, FK/index/type/optional/cardinality/effective-date design",
+      "implementation": "src/returns_engine/model.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_empty_schema_and_idempotent_initialize (test_foundation.FoundationTests.test_empty_schema_and_idempotent_initialize) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-03",
+      "requirement": "Centralized exact IDs, immutable keys, counter bounds/collisions/concurrency/FK consistency",
+      "implementation": "src/returns_engine/ids.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_two_writers_allocate_distinct_ids (test_foundation.FoundationTests.test_two_writers_allocate_distinct_ids) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-04",
+      "requirement": "Complete actual field dictionary including sensitivity/defaults/unique/rules/meaning",
+      "implementation": "docs/data_dictionary.md",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_dictionary_matches_every_actual_column (test_foundation.FoundationTests.test_dictionary_matches_every_actual_column) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-05",
+      "requirement": "Precise money and documented discount/tax/fees/shipping/balances assumptions",
+      "implementation": "src/returns_engine/money.py; docs/project/assumptions.md",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-06",
+      "requirement": "Append-only typed event utility and separate attempt/payout/decision/movement",
+      "implementation": "src/returns_engine/events.py; src/returns_engine/schema.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_event_history_atomic_and_append_only (test_foundation.FoundationTests.test_event_history_atomic_and_append_only) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-07",
+      "requirement": "Prepare five-case audit schema without baseline injection; separate oracle; distinguish SQL/app boundaries",
+      "implementation": "src/returns_engine/schema.py; docs/project/business_rules.md",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_blocked_actions_have_no_ground_truth_inputs (test_foundation.FoundationTests.test_blocked_actions_have_no_ground_truth_inputs) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-08",
+      "requirement": "Fresh temporary DB tests, fresh initialization, schema inspection and actual evidence",
+      "implementation": "tests/test_foundation.py; scripts/verify_phase2.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_empty_schema_and_idempotent_initialize (test_foundation.FoundationTests.test_empty_schema_and_idempotent_initialize) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P2-09",
+      "requirement": "Update named docs/spec/register, truthful report, stop before Phase 3",
+      "implementation": "local Phase 2 report; final public tests provide current regression evidence; PROJECT_SPEC.md",
+      "status": "Implemented but not independently verified",
+      "actual_result": "Inherited closure finding: The Phase 2 report and prior phase boundary are documented historically; timing is not independently reconstructible from Git. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-01",
+      "requirement": "Inspect prior work and record actual Phase 3 prompt",
+      "implementation": "docs/ai_prompt_history.md; docs/project/phase3_closure.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-02",
+      "requirement": "One deterministic starter/custom/full pipeline with exact named full counts",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/config.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_full_counts_and_shared_pipeline_selection (test_generator.GeneratorTests.test_full_counts_and_shared_pipeline_selection) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-03",
+      "requirement": "Valid synthetic masters/transactions, exact IDs, FK and same-order joins",
+      "implementation": "src/returns_engine/generator.py; src/returns_engine/validation.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_fk_same_order_quantity_money_and_events (test_generator.GeneratorTests.test_fk_same_order_quantity_money_and_events) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-04",
+      "requirement": "Serialized cumulative eligibility reservations and deterministic reason codes",
+      "implementation": "src/returns_engine/policy.py; tests/test_generator.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_concurrent_approvals_are_serialized (test_generator.ApprovalTests.test_concurrent_approvals_are_serialized) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-05",
+      "requirement": "Source-derived exact discount, tax, fee and refund balances; prerequisite-dependent transaction facts",
+      "implementation": "src/returns_engine/money.py; src/returns_engine/generator.py; src/returns_engine/validation.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-06",
+      "requirement": "Explicit event history and configurable synthetic distributions with ordinary coverage",
+      "implementation": "src/returns_engine/generator.py; docs/generation.md",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_partial_repeated_rejected_and_pending_coverage (test_generator.GeneratorTests.test_partial_repeated_rejected_and_pending_coverage) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-07",
+      "requirement": "CSV/JSON/SQL exports and measured source manifest/checksums",
+      "implementation": "src/returns_engine/exports.py; outputs/full_final/manifest.json",
+      "status": "Implemented and verified",
+      "actual_result": "Full CSV/JSON/DB parity was rerun; SQL restore remains inherited, with seed hash rechecked.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-08",
+      "requirement": "Fresh starter before full; all prior and new tests; measured validations",
+      "implementation": "docs/project/phase3_closure.md; tests/",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-09",
+      "requirement": "Useful CLI, transactional staging, safe no-overwrite and failure cleanup",
+      "implementation": "src/returns_engine/__main__.py; src/returns_engine/pipeline.py",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_existing_output_is_preserved (test_generator.GeneratorTests.test_existing_output_is_preserved) ... ok. Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-10",
+      "requirement": "Same-seed repeatability and different-seed invariants",
+      "implementation": "src/returns_engine/pipeline.py; selected historical checks summarized in docs/project/phase3_closure.md",
+      "status": "Implemented and verified",
+      "actual_result": "Phase 5 suite: test_same_seed_all_canonical_files_equal (test_generator.GeneratorTests.test_same_seed_all_canonical_files_equal) ... ok. Inherited closure finding: Final current pairs match and the offline starter reproduces; earlier intermediate preflights are explicitly non-equivalent. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-11",
+      "requirement": "Keep valid baseline separate from labelled anomaly/ground-truth phase",
+      "implementation": "outputs/full_final/; outputs/anomalies/phase4_final/",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: The retained baselines contain no generated ground-truth artifact or labelled Phase 4 anomaly injection. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    },
+    {
+      "id": "P3-12",
+      "requirement": "Update docs and measured report; report limitations; stop after Phase 3",
+      "implementation": "README.md; docs/project/phase3_closure.md",
+      "status": "Implemented and verified",
+      "actual_result": "Inherited closure finding: Executed closure suite, clean-copy commands and applicable retained-dataset checks support this scoped requirement. See the public Phase 3 closure summary.",
+      "verification_scope": "Inherited Phase 5 requirement assessment. Final tests and supported reproduction checks are separately recorded; they do not independently prove every compound requirement."
+    }
+  ]
+}

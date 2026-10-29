@@ -1,0 +1,82 @@
+Command: <PYTHON> -m unittest discover -s tests -v
+Executed in a clean temporary public source copy. Interpreter and temporary paths are redacted.
+test_allocation_increments_rollback_and_existing_ids (test_foundation.FoundationTests.test_allocation_increments_rollback_and_existing_ids) ... ok
+test_allocator_exhaustion_and_unknown_entity (test_foundation.FoundationTests.test_allocator_exhaustion_and_unknown_entity) ... ok
+test_blocked_actions_have_no_ground_truth_inputs (test_foundation.FoundationTests.test_blocked_actions_have_no_ground_truth_inputs) ... ok
+test_cross_order_line_rejected (test_foundation.FoundationTests.test_cross_order_line_rejected) ... ok
+test_dictionary_matches_every_actual_column (test_foundation.FoundationTests.test_dictionary_matches_every_actual_column) ... ok
+test_disposition_is_not_inventory_movement (test_foundation.FoundationTests.test_disposition_is_not_inventory_movement) ... ok
+test_empty_schema_and_idempotent_initialize (test_foundation.FoundationTests.test_empty_schema_and_idempotent_initialize) ... ok
+test_event_history_atomic_and_append_only (test_foundation.FoundationTests.test_event_history_atomic_and_append_only) ... ok
+test_event_typed_target_requires_exactly_one_real_reference (test_foundation.FoundationTests.test_event_typed_target_requires_exactly_one_real_reference) ... ok
+test_every_connection_enforces_foreign_keys (test_foundation.FoundationTests.test_every_connection_enforces_foreign_keys) ... ok
+test_every_fk_is_indexed_and_all_pks_are_required (test_foundation.FoundationTests.test_every_fk_is_indexed_and_all_pks_are_required) ... ok
+test_excess_duplicate_and_cumulative_refund_blocked (test_foundation.FoundationTests.test_excess_duplicate_and_cumulative_refund_blocked) ... ok
+test_failed_retry_can_succeed_once (test_foundation.FoundationTests.test_failed_retry_can_succeed_once) ... ok
+test_inspection_cannot_exceed_receipts (test_foundation.FoundationTests.test_inspection_cannot_exceed_receipts) ... ok
+test_invalid_event_transition_time_and_reference (test_foundation.FoundationTests.test_invalid_event_transition_time_and_reference) ... ok
+test_pending_refund_success_transition_is_atomic (test_foundation.FoundationTests.test_pending_refund_success_transition_is_atomic) ... ok
+test_pending_refund_transition_rolls_back_event_on_excess (test_foundation.FoundationTests.test_pending_refund_transition_rolls_back_event_on_excess) ... ok
+test_pk_uniqueness_required_fields_and_enums (test_foundation.FoundationTests.test_pk_uniqueness_required_fields_and_enums) ... ok
+test_preinspection_restock_and_refund_cannot_post (test_foundation.FoundationTests.test_preinspection_restock_and_refund_cannot_post) ... ok
+test_required_id_examples_and_bounds (test_foundation.FoundationTests.test_required_id_examples_and_bounds) ... ok
+test_schema_sql_standalone_reload (test_foundation.FoundationTests.test_schema_sql_standalone_reload) ... ok
+test_split_shipments_and_multiple_inspection_batches (test_foundation.FoundationTests.test_split_shipments_and_multiple_inspection_batches) ... ok
+test_sql_identifier_format_embedding_and_immutability (test_foundation.FoundationTests.test_sql_identifier_format_embedding_and_immutability) ... ok
+test_sql_rejects_all_prescribed_header_id_misspellings (test_foundation.FoundationTests.test_sql_rejects_all_prescribed_header_id_misspellings) ... ok
+test_strict_integer_money_and_arithmetic (test_foundation.FoundationTests.test_strict_integer_money_and_arithmetic) ... ok
+test_transactions_rollback_and_nested_savepoint (test_foundation.FoundationTests.test_transactions_rollback_and_nested_savepoint) ... ok
+test_two_writers_allocate_distinct_ids (test_foundation.FoundationTests.test_two_writers_allocate_distinct_ids) ... ok
+test_used_financial_and_quantity_evidence_cannot_drift (test_foundation.FoundationTests.test_used_financial_and_quantity_evidence_cannot_drift) ... ok
+test_valid_optional_links_and_pending_states (test_foundation.FoundationTests.test_valid_optional_links_and_pending_states) ... ok
+test_cancelled_unused_authorization_releases_quantity (test_generator.ApprovalTests.test_cancelled_unused_authorization_releases_quantity) ... ok
+test_concurrent_approvals_are_serialized (test_generator.ApprovalTests.test_concurrent_approvals_are_serialized) ... ok
+test_repeated_approvals_do_not_overreserve (test_generator.ApprovalTests.test_repeated_approvals_do_not_overreserve) ... ok
+test_requested_excess_is_blocked_not_silently_paid (test_generator.ApprovalTests.test_requested_excess_is_blocked_not_silently_paid) ... ok
+test_shipped_reservation_cannot_be_cancelled (test_generator.ApprovalTests.test_shipped_reservation_cannot_be_cancelled) ... ok
+test_window_boundary_exclusions_and_override_authority (test_generator.ApprovalTests.test_window_boundary_exclusions_and_override_authority) ... ok
+test_actual_rehash_detects_artifact_tampering (test_generator.GeneratorTests.test_actual_rehash_detects_artifact_tampering) ... ok
+test_aggregate_progress_metric_counts_each_request_once (test_generator.GeneratorTests.test_aggregate_progress_metric_counts_each_request_once) ... ok
+test_csv_json_database_parity_and_nulls (test_generator.GeneratorTests.test_csv_json_database_parity_and_nulls) ... ok
+test_different_seed_changes_data_preserves_all_checks (test_generator.GeneratorTests.test_different_seed_changes_data_preserves_all_checks) ... ok
+test_duplicate_movements_count_each_affected_movement (test_generator.GeneratorTests.test_duplicate_movements_count_each_affected_movement) ... ok
+test_equivalent_config_key_order_has_identical_content (test_generator.GeneratorTests.test_equivalent_config_key_order_has_identical_content) ... ok
+test_executable_sql_snapshot_restores_history_guards_and_values (test_generator.GeneratorTests.test_executable_sql_snapshot_restores_history_guards_and_values) ... ok
+test_existing_output_is_preserved (test_generator.GeneratorTests.test_existing_output_is_preserved) ... ok
+test_fk_same_order_quantity_money_and_events (test_generator.GeneratorTests.test_fk_same_order_quantity_money_and_events) ... ok
+test_full_counts_and_shared_pipeline_selection (test_generator.GeneratorTests.test_full_counts_and_shared_pipeline_selection) ... ok
+test_generation_failure_has_no_successful_partial_dataset (test_generator.GeneratorTests.test_generation_failure_has_no_successful_partial_dataset) ... ok
+test_invalid_configuration_fails_before_any_output (test_generator.GeneratorTests.test_invalid_configuration_fails_before_any_output) ... ok
+test_legacy_v1_snapshot_validation_does_not_modify_or_claim_reproduction (test_generator.GeneratorTests.test_legacy_v1_snapshot_validation_does_not_modify_or_claim_reproduction) ... ok
+test_missing_shipments_have_no_receipt_inspection_or_payment (test_generator.GeneratorTests.test_missing_shipments_have_no_receipt_inspection_or_payment) ... ok
+test_no_deliberate_truth_oracle_labels_exported (test_generator.GeneratorTests.test_no_deliberate_truth_oracle_labels_exported) ... ok
+test_nonzero_tax_fee_and_discount_allocation (test_generator.GeneratorTests.test_nonzero_tax_fee_and_discount_allocation) ... ok
+test_orphan_reference_produces_structured_validation_failure (test_generator.GeneratorTests.test_orphan_reference_produces_structured_validation_failure) ... ok
+test_overallocated_inspection_counts_each_affected_disposition (test_generator.GeneratorTests.test_overallocated_inspection_counts_each_affected_disposition) ... ok
+test_partial_repeated_rejected_and_pending_coverage (test_generator.GeneratorTests.test_partial_repeated_rejected_and_pending_coverage) ... ok
+test_pending_rejected_exchange_metric_counts_each_request_once (test_generator.GeneratorTests.test_pending_rejected_exchange_metric_counts_each_request_once) ... ok
+test_reexport_does_not_invent_historical_source_fingerprint (test_generator.GeneratorTests.test_reexport_does_not_invent_historical_source_fingerprint) ... ok
+test_reexport_has_identical_business_files (test_generator.GeneratorTests.test_reexport_has_identical_business_files) ... ok
+test_rejected_pending_and_exchanges_have_no_unauthorized_cash (test_generator.GeneratorTests.test_rejected_pending_and_exchanges_have_no_unauthorized_cash) ... ok
+test_reserved_null_marker_cannot_be_silently_exported (test_generator.GeneratorTests.test_reserved_null_marker_cannot_be_silently_exported) ... ok
+test_same_seed_all_canonical_files_equal (test_generator.GeneratorTests.test_same_seed_all_canonical_files_equal) ... ok
+test_starter_and_custom_config_counts (test_generator.GeneratorTests.test_starter_and_custom_config_counts) ... ok
+test_validator_detects_corrupted_financial_evidence (test_generator.GeneratorTests.test_validator_detects_corrupted_financial_evidence) ... ok
+test_zero_requests_custom_scale (test_generator.GeneratorTests.test_zero_requests_custom_scale) ... ok
+test_duplicate_negative (test_phase4.Phase4Scenarios.test_duplicate_negative) ... ok
+test_excess_negative (test_phase4.Phase4Scenarios.test_excess_negative) ... ok
+test_failed_retry_control (test_phase4.Phase4Scenarios.test_failed_retry_control) ... ok
+test_inventory_negative (test_phase4.Phase4Scenarios.test_inventory_negative) ... ok
+test_inventory_sellable_control (test_phase4.Phase4Scenarios.test_inventory_sellable_control) ... ok
+test_late_negative (test_phase4.Phase4Scenarios.test_late_negative) ... ok
+test_quantity_negative (test_phase4.Phase4Scenarios.test_quantity_negative) ... ok
+test_quantity_partial_control (test_phase4.Phase4Scenarios.test_quantity_partial_control) ... ok
+test_refund_remaining_control (test_phase4.Phase4Scenarios.test_refund_remaining_control) ... ok
+test_window_boundary_control (test_phase4.Phase4Scenarios.test_window_boundary_control) ... ok
+
+----------------------------------------------------------------------
+Ran 73 tests in 42.770s
+
+OK
+
+Exit code: 0

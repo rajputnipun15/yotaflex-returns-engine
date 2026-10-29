@@ -1,0 +1,350 @@
+[
+  {
+    "attempted_operation": {
+      "operation": "authorize",
+      "request_id": "RMA-2026-000002",
+      "requested_units": 2
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 15,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 13,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "BLOCKED",
+    "observed_reason_code": "NO_REMAINING_QUANTITY",
+    "raw_database_error": null,
+    "refund_states": [],
+    "scenario_id": "quantity_negative"
+  },
+  {
+    "attempted_operation": {
+      "operation": "authorize",
+      "request_id": "RMA-2026-000002",
+      "requested_units": 2
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 17,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 13,
+      "paid_minor": 0,
+      "reserved_units": 1,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "ALLOWED",
+    "observed_reason_code": "PARTIAL_REMAINING_QUANTITY",
+    "raw_database_error": null,
+    "refund_states": [],
+    "scenario_id": "quantity_control"
+  },
+  {
+    "attempted_operation": {
+      "amount_minor": 200,
+      "operation": "succeed_refund",
+      "payment_key": "excess-payment",
+      "refund_id": "REF-2026-000002"
+    },
+    "events_for_attempted_refund": 1,
+    "final": {
+      "events": 24,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 24,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "integrity_check": "ok",
+    "observed_decision": "BLOCKED",
+    "observed_reason_code": "REFUND_SUCCESS_GUARD",
+    "raw_database_error": "refund_success_guard",
+    "refund_states": [
+      {
+        "id": "REF-2026-000001",
+        "paid_minor": 100,
+        "payment_key": "prior-payment",
+        "state": "SUCCEEDED"
+      },
+      {
+        "id": "REF-2026-000002",
+        "paid_minor": 0,
+        "payment_key": "excess-payment",
+        "state": "REQUESTED"
+      }
+    ],
+    "scenario_id": "excess_negative"
+  },
+  {
+    "attempted_operation": {
+      "amount_minor": 100,
+      "operation": "succeed_refund",
+      "payment_key": "excess-payment",
+      "refund_id": "REF-2026-000002"
+    },
+    "events_for_attempted_refund": 2,
+    "final": {
+      "events": 25,
+      "paid_minor": 200,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 2
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 24,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "integrity_check": "ok",
+    "observed_decision": "ALLOWED",
+    "observed_reason_code": "REFUND_SUCCEEDED",
+    "raw_database_error": null,
+    "refund_states": [
+      {
+        "id": "REF-2026-000001",
+        "paid_minor": 100,
+        "payment_key": "prior-payment",
+        "state": "SUCCEEDED"
+      },
+      {
+        "id": "REF-2026-000002",
+        "paid_minor": 100,
+        "payment_key": "excess-payment",
+        "state": "SUCCEEDED"
+      }
+    ],
+    "scenario_id": "excess_control"
+  },
+  {
+    "attempted_operation": {
+      "disposition_id": "DSP-2026-000001",
+      "operation": "insert_inventory_movement",
+      "units": 2
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 18,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 18,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "BLOCKED",
+    "observed_reason_code": "MOVEMENT_REQUIRES_ACCEPTED_DECISION",
+    "raw_database_error": "movement_requires_accepted_decision",
+    "refund_states": [],
+    "scenario_id": "inventory_negative"
+  },
+  {
+    "attempted_operation": {
+      "disposition_id": "DSP-2026-000001",
+      "operation": "insert_inventory_movement",
+      "units": 2
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 24,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 2,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 23,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "ALLOWED",
+    "observed_reason_code": "RESTOCK_POSTED",
+    "raw_database_error": null,
+    "refund_states": [],
+    "scenario_id": "inventory_control"
+  },
+  {
+    "attempted_operation": {
+      "operation": "authorize",
+      "override": null,
+      "request_id": "RMA-2026-000001",
+      "requested_at": "2026-11-01T00:00:00Z"
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 9,
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 7,
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "BLOCKED",
+    "observed_reason_code": "WINDOW_EXPIRED",
+    "raw_database_error": null,
+    "refund_states": [],
+    "scenario_id": "late_negative"
+  },
+  {
+    "attempted_operation": {
+      "operation": "authorize",
+      "override": null,
+      "request_id": "RMA-2026-000001",
+      "requested_at": "2026-10-31T00:00:00Z"
+    },
+    "events_for_attempted_refund": 0,
+    "final": {
+      "events": 11,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 7,
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "ALLOWED",
+    "observed_reason_code": "ELIGIBLE",
+    "raw_database_error": null,
+    "refund_states": [],
+    "scenario_id": "late_control"
+  },
+  {
+    "attempted_operation": {
+      "amount_minor": 100,
+      "operation": "succeed_refund",
+      "payment_key": "logical-payment",
+      "refund_id": "REF-2026-000002"
+    },
+    "events_for_attempted_refund": 1,
+    "final": {
+      "events": 24,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 24,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "integrity_check": "ok",
+    "observed_decision": "BLOCKED",
+    "observed_reason_code": "DUPLICATE_PAYMENT_KEY",
+    "raw_database_error": "UNIQUE constraint failed: Refund.payment_key",
+    "refund_states": [
+      {
+        "id": "REF-2026-000001",
+        "paid_minor": 100,
+        "payment_key": "logical-payment",
+        "state": "SUCCEEDED"
+      },
+      {
+        "id": "REF-2026-000002",
+        "paid_minor": 0,
+        "payment_key": "logical-payment",
+        "state": "REQUESTED"
+      }
+    ],
+    "scenario_id": "duplicate_negative"
+  },
+  {
+    "attempted_operation": {
+      "amount_minor": 100,
+      "operation": "succeed_refund",
+      "payment_key": "logical-payment",
+      "refund_id": "REF-2026-000002"
+    },
+    "events_for_attempted_refund": 2,
+    "final": {
+      "events": 25,
+      "paid_minor": 100,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 1
+    },
+    "foreign_key_violations": [],
+    "initial": {
+      "events": 24,
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0,
+      "successful_refunds": 0
+    },
+    "integrity_check": "ok",
+    "observed_decision": "ALLOWED",
+    "observed_reason_code": "REFUND_SUCCEEDED",
+    "raw_database_error": null,
+    "refund_states": [
+      {
+        "id": "REF-2026-000001",
+        "paid_minor": 0,
+        "payment_key": "logical-payment",
+        "state": "FAILED"
+      },
+      {
+        "id": "REF-2026-000002",
+        "paid_minor": 100,
+        "payment_key": "logical-payment",
+        "state": "SUCCEEDED"
+      }
+    ],
+    "scenario_id": "duplicate_control"
+  }
+]

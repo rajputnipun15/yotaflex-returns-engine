@@ -1,0 +1,40 @@
+{
+  "client_date": "2026-10-29",
+  "environment": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1"
+  },
+  "scope": "Clean temporary copy of the selected public files; not a clone of a public GitHub repository.",
+  "tests": {
+    "total": 73,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0
+  },
+  "commands_executed": 19,
+  "nonzero_exit_codes": 0,
+  "full_dataset_regenerated": false,
+  "full_sql_restore_rerun": false,
+  "public_source_hashes": {
+    "config/default.json": "5733fe020f085b34346d8e2138a0246a1424fc0a1362ec3391715703d8108ba6",
+    "scripts/phase4_scenarios.py": "924363f3bab83c1451c5af762b8a6b85d900d9233f7d5faca4dcf2a170017e71",
+    "scripts/phase4_validate.py": "5ed1fef4e711af9d0a5a7df5b8fdd68784fbbce7a26942a33a0af954d180e998",
+    "src/returns_engine/__init__.py": "24f0e5b193b7260e3bc68c439ac8b5f73a1c8ce6497aaa0e5b537e5da56499f2",
+    "src/returns_engine/__main__.py": "1599e846b3026d9fa1fd70c519f680f764def1aa40a2f058f96307be2ca3e0ed",
+    "src/returns_engine/config.py": "1085a2763874d57b184063d98de0ebae659c1100ca347c7ea2440528e8914b09",
+    "src/returns_engine/dictionary.py": "3c5d9e720aeecf7d6998f47de8e1c5ee4da1878353e07f7601465829b1b9cf59",
+    "src/returns_engine/events.py": "e6a4c7112e239e1056a7fff3cea78b414793618932139b93606bc97f9c918bfd",
+    "src/returns_engine/exports.py": "8bfb66898cbb6838eb2eea75484afd0bc7a5ac3ab3491944110549a8ded51b7b",
+    "src/returns_engine/generator.py": "b6cb45c7b9fa59d3b59d026cfab1dbb26229459007f665ba7617ee53162a220b",
+    "src/returns_engine/ids.py": "37596aae6dd3e3358f6d3da408f70d241c8567f151b850648a871e46e98e18ef",
+    "src/returns_engine/model.py": "e5f738b33a77f34c9ab8d1977bdc455055c78ea3f952e5231442e4a8ad36b83e",
+    "src/returns_engine/money.py": "c6cc6e81dc82f044ec31a0f080a4a6dfa88ab4cd6cf3f95b8d5909aea9da9a3a",
+    "src/returns_engine/pipeline.py": "84616a4c60579deaa977e8c64cb68d94608d7bd83c1f7246739f225d1988b853",
+    "src/returns_engine/policy.py": "f79ab7720a9d58c070fdaa4a4c8de68111bddc8c065a9ca8ece76a7fce7e3b7d",
+    "src/returns_engine/schema.py": "de2d456a20601a2b3927ba578b3a04e2734bbea0bd6e24601a7206f425b2b1de",
+    "src/returns_engine/validation.py": "fb9fe3bf9a9ae948ccacd14f56bf976e39112e9c9007a97ff98bd7cbd7491a20",
+    "tests/test_foundation.py": "e927656009134180effe3f272b1e27440012b07ae07394e3139913aca5a9331f",
+    "tests/test_generator.py": "b067a17bc7da1a14b5cc1b0a9211139c0091150d8e7e9d20ff84fac289af713e",
+    "tests/test_phase4.py": "b5c6279f12c24952ccccd73e3fcbda160d0bdee599ce08006509d2a96d37a7da"
+  }
+}

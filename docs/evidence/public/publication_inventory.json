@@ -1,0 +1,598 @@
+{
+  "status": "REVIEWED_LOCAL_SCOPE_NOT_PROOF_OF_REMOTE_PUBLICATION",
+  "file_count": 115,
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 84,
+      "sha256": "d6f29feb5b85319d82665892f02d96912f232a84c350e2000ae93c0fcf3334f7"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 701,
+      "sha256": "7a976ec8c4fcd5b6c46b3d62f51d5a5a08a2ac9a39d6e7264562f0cd7b24fca9"
+    },
+    {
+      "path": "PROJECT_SPEC.md",
+      "bytes": 4257,
+      "sha256": "1ce765863a9ba4df9a9eca611e0a59195242aa942aeac82b2dc4e7cfa28c7c42"
+    },
+    {
+      "path": "README.md",
+      "bytes": 16403,
+      "sha256": "290b7ecbd802510758b325d3a4cdc7b2a6342f12256e6eddc7739177aa957620"
+    },
+    {
+      "path": "artifacts/full/README.md",
+      "bytes": 1440,
+      "sha256": "41622df0c2d6339808d6c0939d9eff215dc183d27dd9454a3798f35429415432"
+    },
+    {
+      "path": "artifacts/full/archive_checksums.json",
+      "bytes": 8754,
+      "sha256": "d893be1220f9ea0d4f84a8b222496ebb467b7c0bb6ad1ab1113a8caa4ad0976a"
+    },
+    {
+      "path": "artifacts/full/configuration.json",
+      "bytes": 1769,
+      "sha256": "941111aa2e5b8d705b8571b56abf514732af598828f4f60d552139ee28768812"
+    },
+    {
+      "path": "artifacts/full/manifest.json",
+      "bytes": 8385,
+      "sha256": "637e5bd426999e1f54176992ab24c18069a32003c9023228fd031d5735bbb573"
+    },
+    {
+      "path": "artifacts/full/source_manifest.json",
+      "bytes": 285,
+      "sha256": "590ebcb991469c86ea4ddd3c174f2ef25f0ab2b0f4249cdd95219e24915258d2"
+    },
+    {
+      "path": "artifacts/full/validation.json",
+      "bytes": 6028,
+      "sha256": "34907f11bc2a7835c582764b2ee30049c31f07b812c2c1d2a3c2a07bf6af1f73"
+    },
+    {
+      "path": "artifacts/full/validation.md",
+      "bytes": 3259,
+      "sha256": "7548a2dd326de51f35be6f396d5ee6df7ff3d2491ac3e8578694c226bb1aebbc"
+    },
+    {
+      "path": "artifacts/full/yotaflex-full-20261022.zip",
+      "bytes": 18134074,
+      "sha256": "ffe2d70371da172b3e128186d9070126b771d521565d075db73083556e5895ca"
+    },
+    {
+      "path": "config/default.json",
+      "bytes": 2417,
+      "sha256": "5733fe020f085b34346d8e2138a0246a1424fc0a1362ec3391715703d8108ba6"
+    },
+    {
+      "path": "docs/ai_prompt_history.md",
+      "bytes": 15494,
+      "sha256": "f90557060ae3571d1b83a90908eb2c85c8a904c55ea331351e90e527de701ba9"
+    },
+    {
+      "path": "docs/ai_usage_disclosure.md",
+      "bytes": 2041,
+      "sha256": "bb6f5d6409ccab667406b173bd013bb3212114b27829ba50b91beffaf42cb236"
+    },
+    {
+      "path": "docs/data_dictionary.md",
+      "bytes": 70338,
+      "sha256": "d25ddc1a8141eac80b972f82afdff57ddb2476535319fac5349881587846acfb"
+    },
+    {
+      "path": "docs/evidence/public/analytics.json",
+      "bytes": 13571,
+      "sha256": "68f422a80202e67470c49ad8826ad3ec5c085691ad88209cad9bc226547b2124"
+    },
+    {
+      "path": "docs/evidence/public/baseline_audit.json",
+      "bytes": 18234,
+      "sha256": "c6e440b18ff45aaf9a305cd82f318619bb68e8aeff5b310c5991d6da7a6bef13"
+    },
+    {
+      "path": "docs/evidence/public/commands.json",
+      "bytes": 61844,
+      "sha256": "05fc2923e251d84e5d8173e096ee794c9779a858b709f32f2952a2e8b2cd500a"
+    },
+    {
+      "path": "docs/evidence/public/final_tests.log",
+      "bytes": 9906,
+      "sha256": "b840f9877aeb94654d483b804cbb0735a6b653be189186134e4f2681bb8791ec"
+    },
+    {
+      "path": "docs/evidence/public/final_verification.json",
+      "bytes": 2562,
+      "sha256": "5f53530b6616bcc470088d97e32e8a03af41cea47a4775546f8dcba528e9dd12"
+    },
+    {
+      "path": "docs/evidence/public/git_preparation.json",
+      "bytes": 1180,
+      "sha256": null
+    },
+    {
+      "path": "docs/evidence/public/phase4_ground_truth.json",
+      "bytes": 7566,
+      "sha256": "0bfc087e23edb2be5f3cb943d133ca8f8a0218305fcf5e22eeef9907f3df0d4e"
+    },
+    {
+      "path": "docs/evidence/public/phase4_observations.json",
+      "bytes": 9194,
+      "sha256": "975ba8bf1484fe4fde40da0fe2939709b74aa73ae4abcb349fbb5291cb5c6407"
+    },
+    {
+      "path": "docs/evidence/public/phase4_results.json",
+      "bytes": 3652,
+      "sha256": "1934e5f0d54a20c288e188e8960b7df34b068193e14270b82b0f07c859758ab2"
+    },
+    {
+      "path": "docs/evidence/public/publication_inventory.json",
+      "bytes": null,
+      "sha256": null
+    },
+    {
+      "path": "docs/evidence/public/requirements_audit.json",
+      "bytes": 68516,
+      "sha256": "6308da6a5ab5761abe220a7cdf127454f95b47e32dc6b868c8fbeab2c6344835"
+    },
+    {
+      "path": "docs/final_submission_report.md",
+      "bytes": 6373,
+      "sha256": null
+    },
+    {
+      "path": "docs/project/analytics_summary.md",
+      "bytes": 4492,
+      "sha256": "4c5d60692d264b015f7543dabb7b916872777a39eddd109420f2387a1d9a2f52"
+    },
+    {
+      "path": "docs/project/architecture.md",
+      "bytes": 2087,
+      "sha256": "644f249dcfafd3880c81374c5a8dd83dc05ae88c5148cfd42bd291e5d58baf88"
+    },
+    {
+      "path": "docs/project/assumptions.md",
+      "bytes": 4691,
+      "sha256": "ff57796ff6b4c9112d49f53003f0bfbbf0734c206512812350f80a5b6625379c"
+    },
+    {
+      "path": "docs/project/business_rules.md",
+      "bytes": 3710,
+      "sha256": "9360af86154ad4b8b961515642a62688ebf6b1e5784a1906ef6035aba78edb57"
+    },
+    {
+      "path": "docs/project/export_contract.md",
+      "bytes": 6876,
+      "sha256": "eeda1e9d9946e53ea816b965b34af2e6cad355caca92e79c13062906bbb22871"
+    },
+    {
+      "path": "docs/project/final_requirements_audit.md",
+      "bytes": 63498,
+      "sha256": "72fa630ce4b5d89e1f4b05d702327d5701cdaa05eb1cb1d02df0876d44390b67"
+    },
+    {
+      "path": "docs/project/generation.md",
+      "bytes": 10072,
+      "sha256": "22e547106b5bee80cff2e10a4c16af723e9d4739fb457146d0513a031a32d665"
+    },
+    {
+      "path": "docs/project/phase3_closure.md",
+      "bytes": 1594,
+      "sha256": "ecadb79f87c475adf821775343da40978b8099369a24587df1802c040bc6a14f"
+    },
+    {
+      "path": "docs/project/phase4_verification.md",
+      "bytes": 2656,
+      "sha256": "1897f50645ea85f701c956e4d9b3bb61bc37b70a4cb6c4ae593ae291a0ab40c9"
+    },
+    {
+      "path": "docs/project/phase5_verification.md",
+      "bytes": 2174,
+      "sha256": "c0054837736e3b6adbff7d2a754954a63fe9939dfde4136c67f17c1105d72fb4"
+    },
+    {
+      "path": "docs/project/repository_audit.md",
+      "bytes": 1938,
+      "sha256": "09a1c22425c13fec28c9b79f9ddaf4cf441352f39fe7368bb849e5d21d35e7ed"
+    },
+    {
+      "path": "docs/project/reproducibility.md",
+      "bytes": 2159,
+      "sha256": "1ace58abc830ac82a231346762f7882e6bffd304d22992cb8a667fe514ee45b4"
+    },
+    {
+      "path": "docs/project/requirements_matrix.md",
+      "bytes": 1521,
+      "sha256": "4d8d2425ebb00407022579eed6e94cd64180e775275e9208b9e6296861b2d320"
+    },
+    {
+      "path": "docs/project/schema.md",
+      "bytes": 9393,
+      "sha256": "57d694307cc93b893f3ca15ad1dda7d4100c2968f67447c42658bbda617031c8"
+    },
+    {
+      "path": "docs/schema.sql",
+      "bytes": 81124,
+      "sha256": "c7ffb3c8700150c713d6ed9ad0ac39fb25945eab64013804be820c6c71db1455"
+    },
+    {
+      "path": "examples/starter/README.md",
+      "bytes": 775,
+      "sha256": "6720bc349ba421333fffedcda6038d71ec56b24421fa452b83124a857aadc6b6"
+    },
+    {
+      "path": "examples/starter/catalog.json",
+      "bytes": 6132,
+      "sha256": "6b3ff173ff6ca1ffddac0fd345980109eee5d55f5cfa905a68d960360f996083"
+    },
+    {
+      "path": "examples/starter/configuration.json",
+      "bytes": 1766,
+      "sha256": "83608e87b90288fd673dae8c40670405a19e79ae6da0092f27344d9e928bb790"
+    },
+    {
+      "path": "examples/starter/csv/ActionAttempt.csv",
+      "bytes": 22089,
+      "sha256": "3bc438e7fe7f03df62d993798c90c07d35469d9fb6d162bf6045dc2a574ef80b"
+    },
+    {
+      "path": "examples/starter/csv/AuthorizationLine.csv",
+      "bytes": 3301,
+      "sha256": "74b096fa1e7d09292096a352e4ea86471ff10107d08d2b81c365f74847251d2e"
+    },
+    {
+      "path": "examples/starter/csv/Customer.csv",
+      "bytes": 8390,
+      "sha256": "e6ab75b98b7b5355e78e874816860edb0928d3fdcd567da85a3c2ba785f44eff"
+    },
+    {
+      "path": "examples/starter/csv/EventLog.csv",
+      "bytes": 470686,
+      "sha256": "f8ffc9e0b7922020ffa6be7624e5fa56a636c10a1b903d2a935da670124d5003"
+    },
+    {
+      "path": "examples/starter/csv/IdSequence.csv",
+      "bytes": 296,
+      "sha256": "cb2dceee7096f340409300f8e2a7affa5d8f4fbffd3cbfaacada966ead278e6a"
+    },
+    {
+      "path": "examples/starter/csv/Inspection.csv",
+      "bytes": 3637,
+      "sha256": "f26b94cea3242b5876a2fd950053ffeb2fd40cda6f4448cad9f737f809e9e2e7"
+    },
+    {
+      "path": "examples/starter/csv/InventoryDisposition.csv",
+      "bytes": 5503,
+      "sha256": "161ad09e368743e85b53745f5eebfe6b5df5e2b673347bb3cd43560c8f927733"
+    },
+    {
+      "path": "examples/starter/csv/InventoryMovement.csv",
+      "bytes": 2511,
+      "sha256": "f07060addccf4ffea43ce583c80dd1ac3fd39665aa2f974b886f53f8dca89b03"
+    },
+    {
+      "path": "examples/starter/csv/Order.csv",
+      "bytes": 27303,
+      "sha256": "9b058ae4787522fdd617378c18db7d21075b3d87d51aa21b108cb894a2bbd446"
+    },
+    {
+      "path": "examples/starter/csv/OrderLine.csv",
+      "bytes": 41861,
+      "sha256": "73982dcd6ebe7e86aab8651e2f7739e6558a9431d6c6a484d4576e05af1fc2ec"
+    },
+    {
+      "path": "examples/starter/csv/Product.csv",
+      "bytes": 2208,
+      "sha256": "a9c98f8f71b225b653b226b6473738ded76fcbf102922e71c9491bf8592eee19"
+    },
+    {
+      "path": "examples/starter/csv/Refund.csv",
+      "bytes": 4354,
+      "sha256": "f23b061532b45b67661d0419466b6a3a1532c2a874eda08cecdc4ff31980757c"
+    },
+    {
+      "path": "examples/starter/csv/RefundObligation.csv",
+      "bytes": 2409,
+      "sha256": "000ce4350c23444511f471c6829d84ba1bc0c8458e46c8067e527efabd0dbb1d"
+    },
+    {
+      "path": "examples/starter/csv/ReturnAuthorization.csv",
+      "bytes": 2312,
+      "sha256": "1e4d5bf66672331811a2c640c93620bb49c00458f94bfd2743c2586d2618bfa5"
+    },
+    {
+      "path": "examples/starter/csv/ReturnLine.csv",
+      "bytes": 6343,
+      "sha256": "92647096dbe701100166122da8538eb4d0ec6d4f2cea972f2291a4eb6519bf50"
+    },
+    {
+      "path": "examples/starter/csv/ReturnPolicy.csv",
+      "bytes": 143,
+      "sha256": "e7a78e5d26475f7f23f93335126f2a3bd1da37cd21dd619028b8cdc6a6a03775"
+    },
+    {
+      "path": "examples/starter/csv/ReturnRequest.csv",
+      "bytes": 4470,
+      "sha256": "eec8fd2c431be496fbb5ae03cca2425b93c5aabbed0e6207f13fab5005072e58"
+    },
+    {
+      "path": "examples/starter/csv/ReturnShipment.csv",
+      "bytes": 3122,
+      "sha256": "2678d98035707d9645797bedfa8604b647baaa96f234659bea0c0f98e3b43042"
+    },
+    {
+      "path": "examples/starter/csv/SchemaVersion.csv",
+      "bytes": 10,
+      "sha256": "411e2f7a2d93ba336a76861f19fcde5311824d7d099113e1408ff7db03326117"
+    },
+    {
+      "path": "examples/starter/csv/ShipmentLine.csv",
+      "bytes": 2828,
+      "sha256": "96a21fbc00216f3e058a7e7f5f6dcf99cc6e73f4c0364a9ed5a9beb9ab0b0e82"
+    },
+    {
+      "path": "examples/starter/customer_profiles.json",
+      "bytes": 7057,
+      "sha256": "d5de65865e7a8045f431cbc645223b49545b1c2b083004c828e0c3ff80374acd"
+    },
+    {
+      "path": "examples/starter/json/ActionAttempt.json",
+      "bytes": 53062,
+      "sha256": "31277d3cef87af634ff7f03a2fca9f4d340f5bb7866408c11878d0d7cb543278"
+    },
+    {
+      "path": "examples/starter/json/AuthorizationLine.json",
+      "bytes": 7114,
+      "sha256": "6374992e7187327f41a8f1793d1f4d5f998f914201899248a38038c8a352a3db"
+    },
+    {
+      "path": "examples/starter/json/Customer.json",
+      "bytes": 13657,
+      "sha256": "668dd20edeaecd46b010aa2de860514673c5d242b61fed26c94efcd7c9b73d2d"
+    },
+    {
+      "path": "examples/starter/json/EventLog.json",
+      "bytes": 1756158,
+      "sha256": "3c64ad63a02cae7a836ab587912a1e08d504f11a50e2652f83dcaf01e01d7b5a"
+    },
+    {
+      "path": "examples/starter/json/IdSequence.json",
+      "bytes": 722,
+      "sha256": "cb7b204a974ae77c44e1c2cf34608d927b1be7d4df1d456448bac4e03753339f"
+    },
+    {
+      "path": "examples/starter/json/Inspection.json",
+      "bytes": 7987,
+      "sha256": "7367bed98b594d082d879ad797c86858de14e468d4d78c473e3ca5d48a8984c7"
+    },
+    {
+      "path": "examples/starter/json/InventoryDisposition.json",
+      "bytes": 10660,
+      "sha256": "6977195fae773c078d7399b85018341e19e2a4088a1e5a34bc637c8e1c922b83"
+    },
+    {
+      "path": "examples/starter/json/InventoryMovement.json",
+      "bytes": 4817,
+      "sha256": "291a2065a855ae33517c888604a125d480bd48899cbbdf9c27b41c9648c1814a"
+    },
+    {
+      "path": "examples/starter/json/Order.json",
+      "bytes": 57532,
+      "sha256": "ac2a3312042ff11a9e86f05303e95112b90cdc748fd7eaccd41b31148ce50907"
+    },
+    {
+      "path": "examples/starter/json/OrderLine.json",
+      "bytes": 130236,
+      "sha256": "571e7fcf4681f7fbee5223d3d1b4f075c0adf3f6c6e70cad2533193ae6398d23"
+    },
+    {
+      "path": "examples/starter/json/Product.json",
+      "bytes": 3706,
+      "sha256": "2d6c9245816bc08de5ace04b211c5b35815e0fb8ad82f6368125c36be8ec1bb7"
+    },
+    {
+      "path": "examples/starter/json/Refund.json",
+      "bytes": 9300,
+      "sha256": "6b34e87e39e58aa42f65be5f8c8e5dd6b75954c30d4366255e4be771b93eb0d1"
+    },
+    {
+      "path": "examples/starter/json/RefundObligation.json",
+      "bytes": 5237,
+      "sha256": "b4de3e00e9c68f6ba219a6d68ac74d053086e4f9521bd789880eff9b3ad565f2"
+    },
+    {
+      "path": "examples/starter/json/ReturnAuthorization.json",
+      "bytes": 4060,
+      "sha256": "bd243938d9aaed65e94b0e52edd6b113327d4221738a84022a9a8d87e5389937"
+    },
+    {
+      "path": "examples/starter/json/ReturnLine.json",
+      "bytes": 14666,
+      "sha256": "de646d95934c4a1917fd5376c40e81e87f60f00fcc105b3e31adc8598ed7edcf"
+    },
+    {
+      "path": "examples/starter/json/ReturnPolicy.json",
+      "bytes": 165,
+      "sha256": "e7889ac90c57840b1a3ba299de7507777bf1fef76ae05780e5d50f05d46181e1"
+    },
+    {
+      "path": "examples/starter/json/ReturnRequest.json",
+      "bytes": 9304,
+      "sha256": "4a3e8a36a08c2daf6110a9259f4e03cc2e816bdc50afa9462232c02712083c12"
+    },
+    {
+      "path": "examples/starter/json/ReturnShipment.json",
+      "bytes": 5492,
+      "sha256": "f29d51b135370cab42e854974211f2d388e09868c82ac07d1c22020c06e57835"
+    },
+    {
+      "path": "examples/starter/json/SchemaVersion.json",
+      "bytes": 16,
+      "sha256": "a657367ce12f8be8981a8e89c36fb75e75356b4fd661d477ae4e0ac8f2090c5c"
+    },
+    {
+      "path": "examples/starter/json/ShipmentLine.json",
+      "bytes": 7528,
+      "sha256": "ad997ab320bba58f441b87dcbe6f382364d115586762e488cdfc02fb2ec3d1e1"
+    },
+    {
+      "path": "examples/starter/manifest.json",
+      "bytes": 8203,
+      "sha256": "0ec1feaaf3958d8152a4eebf7e0a4dc213ccbe89e4961695a543094c0554b253"
+    },
+    {
+      "path": "examples/starter/order_totals.json",
+      "bytes": 35883,
+      "sha256": "79a59ea39e38f3614e0481b1b96eff30e8cc9635eebb9ec6ff5c86e70d8d4337"
+    },
+    {
+      "path": "examples/starter/quantity_summary.json",
+      "bytes": 17380,
+      "sha256": "8c1573198f8a05eeedb43a4ed1954c135844da77d468335b8138c81a11d33eef"
+    },
+    {
+      "path": "examples/starter/schema.sql",
+      "bytes": 81124,
+      "sha256": "c7ffb3c8700150c713d6ed9ad0ac39fb25945eab64013804be820c6c71db1455"
+    },
+    {
+      "path": "examples/starter/seed.sql",
+      "bytes": 1051999,
+      "sha256": "55684f2ff72df9c80962793129f020e4dba9ab6776626d4dc7a735279724f53c"
+    },
+    {
+      "path": "examples/starter/source_manifest.json",
+      "bytes": 285,
+      "sha256": "ea6dbd8de3e95aa8406b7d36587493a3107df0a41f52090ac447e47df4ed2cf2"
+    },
+    {
+      "path": "examples/starter/validation.json",
+      "bytes": 5878,
+      "sha256": "0bf6452f8e439626f10e195994d0c296b852191640861067dc91564945d4c2ac"
+    },
+    {
+      "path": "examples/starter/validation.md",
+      "bytes": 3205,
+      "sha256": "5c624e0bd0ea285173f9513fb110bfacf2d4619caf601e9f40613f41e427fd37"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 303,
+      "sha256": "c5c530e37ac92607740dd099d62cc9274ae82621d0d028a3a3a8bbc5aa7f5cca"
+    },
+    {
+      "path": "scripts/phase4_scenarios.py",
+      "bytes": 13101,
+      "sha256": "924363f3bab83c1451c5af762b8a6b85d900d9233f7d5faca4dcf2a170017e71"
+    },
+    {
+      "path": "scripts/phase4_validate.py",
+      "bytes": 4793,
+      "sha256": "5ed1fef4e711af9d0a5a7df5b8fdd68784fbbce7a26942a33a0af954d180e998"
+    },
+    {
+      "path": "src/returns_engine/__init__.py",
+      "bytes": 101,
+      "sha256": "24f0e5b193b7260e3bc68c439ac8b5f73a1c8ce6497aaa0e5b537e5da56499f2"
+    },
+    {
+      "path": "src/returns_engine/__main__.py",
+      "bytes": 3921,
+      "sha256": "1599e846b3026d9fa1fd70c519f680f764def1aa40a2f058f96307be2ca3e0ed"
+    },
+    {
+      "path": "src/returns_engine/config.py",
+      "bytes": 8585,
+      "sha256": "1085a2763874d57b184063d98de0ebae659c1100ca347c7ea2440528e8914b09"
+    },
+    {
+      "path": "src/returns_engine/dictionary.py",
+      "bytes": 3972,
+      "sha256": "3c5d9e720aeecf7d6998f47de8e1c5ee4da1878353e07f7601465829b1b9cf59"
+    },
+    {
+      "path": "src/returns_engine/events.py",
+      "bytes": 2656,
+      "sha256": "e6a4c7112e239e1056a7fff3cea78b414793618932139b93606bc97f9c918bfd"
+    },
+    {
+      "path": "src/returns_engine/exports.py",
+      "bytes": 6958,
+      "sha256": "8bfb66898cbb6838eb2eea75484afd0bc7a5ac3ab3491944110549a8ded51b7b"
+    },
+    {
+      "path": "src/returns_engine/generator.py",
+      "bytes": 19144,
+      "sha256": "b6cb45c7b9fa59d3b59d026cfab1dbb26229459007f665ba7617ee53162a220b"
+    },
+    {
+      "path": "src/returns_engine/ids.py",
+      "bytes": 2293,
+      "sha256": "37596aae6dd3e3358f6d3da408f70d241c8567f151b850648a871e46e98e18ef"
+    },
+    {
+      "path": "src/returns_engine/model.py",
+      "bytes": 12846,
+      "sha256": "e5f738b33a77f34c9ab8d1977bdc455055c78ea3f952e5231442e4a8ad36b83e"
+    },
+    {
+      "path": "src/returns_engine/money.py",
+      "bytes": 2246,
+      "sha256": "c6cc6e81dc82f044ec31a0f080a4a6dfa88ab4cd6cf3f95b8d5909aea9da9a3a"
+    },
+    {
+      "path": "src/returns_engine/pipeline.py",
+      "bytes": 10366,
+      "sha256": "84616a4c60579deaa977e8c64cb68d94608d7bd83c1f7246739f225d1988b853"
+    },
+    {
+      "path": "src/returns_engine/policy.py",
+      "bytes": 8492,
+      "sha256": "f79ab7720a9d58c070fdaa4a4c8de68111bddc8c065a9ca8ece76a7fce7e3b7d"
+    },
+    {
+      "path": "src/returns_engine/schema.py",
+      "bytes": 13504,
+      "sha256": "de2d456a20601a2b3927ba578b3a04e2734bbea0bd6e24601a7206f425b2b1de"
+    },
+    {
+      "path": "src/returns_engine/validation.py",
+      "bytes": 24507,
+      "sha256": "fb9fe3bf9a9ae948ccacd14f56bf976e39112e9c9007a97ff98bd7cbd7491a20"
+    },
+    {
+      "path": "tests/test_foundation.py",
+      "bytes": 22095,
+      "sha256": "e927656009134180effe3f272b1e27440012b07ae07394e3139913aca5a9331f"
+    },
+    {
+      "path": "tests/test_generator.py",
+      "bytes": 23547,
+      "sha256": "b067a17bc7da1a14b5cc1b0a9211139c0091150d8e7e9d20ff84fac289af713e"
+    },
+    {
+      "path": "tests/test_phase4.py",
+      "bytes": 2279,
+      "sha256": "b5c6279f12c24952ccccd73e3fcbda160d0bdee599ce08006509d2a96d37a7da"
+    }
+  ],
+  "hash_exclusions": [
+    "docs/final_submission_report.md",
+    "docs/evidence/public/publication_inventory.json",
+    "docs/evidence/public/git_preparation.json"
+  ],
+  "excluded": [
+    "prompts/",
+    "outputs/",
+    "submission/",
+    "raw private evidence",
+    "local-only scripts",
+    "caches",
+    "SQLite databases",
+    "source-material extracts"
+  ],
+  "privacy_screen": "All selected text files and all full ZIP member bytes screened for selected path/token/private-key patterns and local account name; no guarantee against every sensitive format.",
+  "full_archive": "artifacts/full/yotaflex-full-20261022.zip"
+}

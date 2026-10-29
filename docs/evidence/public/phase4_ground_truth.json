@@ -1,0 +1,258 @@
+[
+  {
+    "attempted_operation": "authorize second request for two units",
+    "category": "quantity",
+    "expected_decision": "BLOCKED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "NO_REMAINING_QUANTITY",
+    "fixture": "quantity_negative.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "purchase_units": 2,
+      "requested_units": 2,
+      "reserved_units_control": 1,
+      "reserved_units_negative": 2
+    },
+    "rule_id": "cumulative return reservation",
+    "scenario_id": "quantity_negative"
+  },
+  {
+    "attempted_operation": "authorize second request for two units",
+    "category": "quantity",
+    "expected_decision": "ALLOWED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 1,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "PARTIAL_REMAINING_QUANTITY",
+    "fixture": "quantity_control.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "purchase_units": 2,
+      "requested_units": 2,
+      "reserved_units_control": 1,
+      "reserved_units_negative": 2
+    },
+    "rule_id": "cumulative return reservation",
+    "scenario_id": "quantity_control"
+  },
+  {
+    "attempted_operation": "post successful refund against remaining entitlement",
+    "category": "excess",
+    "expected_decision": "BLOCKED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "REFUND_SUCCESS_GUARD",
+    "fixture": "excess_negative.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "attempt_minor_control": 100,
+      "attempt_minor_negative": 200,
+      "obligation_minor": 200,
+      "previous_success_minor": 100,
+      "purchase_paid_minor": 200
+    },
+    "rule_id": "remaining refund entitlement",
+    "scenario_id": "excess_negative"
+  },
+  {
+    "attempted_operation": "post successful refund against remaining entitlement",
+    "category": "excess",
+    "expected_decision": "ALLOWED",
+    "expected_effects": {
+      "paid_minor": 100,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "REFUND_SUCCEEDED",
+    "fixture": "excess_control.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "attempt_minor_control": 100,
+      "attempt_minor_negative": 200,
+      "obligation_minor": 200,
+      "previous_success_minor": 100,
+      "purchase_paid_minor": 200
+    },
+    "rule_id": "remaining refund entitlement",
+    "scenario_id": "excess_control"
+  },
+  {
+    "attempted_operation": "post restock movement",
+    "category": "inventory",
+    "expected_decision": "BLOCKED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "MOVEMENT_REQUIRES_ACCEPTED_DECISION",
+    "fixture": "inventory_negative.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_inspection": "FINALIZED SELLABLE",
+      "movement_units": 2,
+      "negative_inspection": "absent",
+      "received_units": 2
+    },
+    "rule_id": "inspection before restock",
+    "scenario_id": "inventory_negative"
+  },
+  {
+    "attempted_operation": "post restock movement",
+    "category": "inventory",
+    "expected_decision": "ALLOWED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 2
+    },
+    "expected_reason_code": "RESTOCK_POSTED",
+    "fixture": "inventory_control.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_inspection": "FINALIZED SELLABLE",
+      "movement_units": 2,
+      "negative_inspection": "absent",
+      "received_units": 2
+    },
+    "rule_id": "inspection before restock",
+    "scenario_id": "inventory_control"
+  },
+  {
+    "attempted_operation": "authorize request at configured date",
+    "category": "late",
+    "expected_decision": "BLOCKED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "WINDOW_EXPIRED",
+    "fixture": "late_negative.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_request_date_local": "2026-10-31",
+      "delivery_date_local": "2026-10-01",
+      "inclusive_deadline_local": "2026-10-31",
+      "negative_request_date_local": "2026-11-01",
+      "override": null
+    },
+    "rule_id": "inclusive return window",
+    "scenario_id": "late_negative"
+  },
+  {
+    "attempted_operation": "authorize request at configured date",
+    "category": "late",
+    "expected_decision": "ALLOWED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "ELIGIBLE",
+    "fixture": "late_control.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_request_date_local": "2026-10-31",
+      "delivery_date_local": "2026-10-01",
+      "inclusive_deadline_local": "2026-10-31",
+      "negative_request_date_local": "2026-11-01",
+      "override": null
+    },
+    "rule_id": "inclusive return window",
+    "scenario_id": "late_control"
+  },
+  {
+    "attempted_operation": "post another success with the same payment key",
+    "category": "duplicate",
+    "expected_decision": "BLOCKED",
+    "expected_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "DUPLICATE_PAYMENT_KEY",
+    "fixture": "duplicate_negative.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_prior_payment": "FAILED 0",
+      "negative_prior_payment": "SUCCEEDED 100",
+      "obligation_minor": 200,
+      "payment_key": "logical-payment",
+      "retry_minor": 100
+    },
+    "rule_id": "one successful payment per key",
+    "scenario_id": "duplicate_negative"
+  },
+  {
+    "attempted_operation": "post another success with the same payment key",
+    "category": "duplicate",
+    "expected_decision": "ALLOWED",
+    "expected_effects": {
+      "paid_minor": 100,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "expected_reason_code": "REFUND_SUCCEEDED",
+    "fixture": "duplicate_control.db",
+    "fixture_entities": [
+      "ORD-2026-000001",
+      "ORL-2026-000001",
+      "RMA-2026-000001"
+    ],
+    "preconditions": {
+      "control_prior_payment": "FAILED 0",
+      "negative_prior_payment": "SUCCEEDED 100",
+      "obligation_minor": 200,
+      "payment_key": "logical-payment",
+      "retry_minor": 100
+    },
+    "rule_id": "one successful payment per key",
+    "scenario_id": "duplicate_control"
+  }
+]

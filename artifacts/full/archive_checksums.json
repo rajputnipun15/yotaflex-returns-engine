@@ -1,0 +1,269 @@
+{
+  "archive": "artifacts/full/yotaflex-full-20261022.zip",
+  "archive_bytes": 18134074,
+  "archive_sha256": "ffe2d70371da172b3e128186d9070126b771d521565d075db73083556e5895ca",
+  "members": [
+    {
+      "name": "catalog.json",
+      "sha256": "1a58df9509c235daa76622bfd2fbe5d9a2ae2d7ae5d96ffb21f914d30737e645",
+      "bytes": 6135
+    },
+    {
+      "name": "configuration.json",
+      "sha256": "941111aa2e5b8d705b8571b56abf514732af598828f4f60d552139ee28768812",
+      "bytes": 1769
+    },
+    {
+      "name": "csv/ActionAttempt.csv",
+      "sha256": "ffdfa2732a16020c4bb6b90b9add0a8abb012100bcfbdaa7bec2c94d9d9c92fe",
+      "bytes": 2215956
+    },
+    {
+      "name": "csv/AuthorizationLine.csv",
+      "sha256": "bcfe64d93841805466c0a35e03bef29a4b6ab0e3651e4d8d8eb1cfb6ed69097d",
+      "bytes": 372065
+    },
+    {
+      "name": "csv/Customer.csv",
+      "sha256": "9755d0fcba9f1e74a6f1ea8e6dbd97e330fc17ac894d9a4eecda4cab319bcb47",
+      "bytes": 838613
+    },
+    {
+      "name": "csv/EventLog.csv",
+      "sha256": "17ecb849331b894ffcbbd6fe0cfa73268c4a2771e8b04444795d7bb1c0ea807d",
+      "bytes": 48921061
+    },
+    {
+      "name": "csv/IdSequence.csv",
+      "sha256": "74e36c524400bad5e432541c9d70273046499b585640624bb4d621ba1ac3e97b",
+      "bytes": 326
+    },
+    {
+      "name": "csv/Inspection.csv",
+      "sha256": "a13e7aab63763724a8bfa2cad74621610d63d1aab775c9520f952c50992493b4",
+      "bytes": 406243
+    },
+    {
+      "name": "csv/InventoryDisposition.csv",
+      "sha256": "477ffd638c3757acf67a4de536567ab94ce24562ad33375c52f446245313d66a",
+      "bytes": 617768
+    },
+    {
+      "name": "csv/InventoryMovement.csv",
+      "sha256": "dc6ae7e966e1424664055a87e9d87684857cea2f09d99b2acfa66beaf1bb1db4",
+      "bytes": 280866
+    },
+    {
+      "name": "csv/Order.csv",
+      "sha256": "1b3ba6f0c6ec6bb6f62a533136e50348c1f6ded2552a2e961bf2af9b5d5426f4",
+      "bytes": 2724047
+    },
+    {
+      "name": "csv/OrderLine.csv",
+      "sha256": "465d952b79e3320eed52184a1a87eec2130c4da0f9ed0220a8d527b9912b97e5",
+      "bytes": 3956289
+    },
+    {
+      "name": "csv/Product.csv",
+      "sha256": "a9c98f8f71b225b653b226b6473738ded76fcbf102922e71c9491bf8592eee19",
+      "bytes": 2208
+    },
+    {
+      "name": "csv/Refund.csv",
+      "sha256": "3d1b91ff7467121f66cd3585b9c590dce3fc3aea11d90351ec4209d91cf129e7",
+      "bytes": 525130
+    },
+    {
+      "name": "csv/RefundObligation.csv",
+      "sha256": "ee7ac2d79ef2730b230fc06baf24283d1deb31a82260db836c6ae5bfcf035002",
+      "bytes": 306085
+    },
+    {
+      "name": "csv/ReturnAuthorization.csv",
+      "sha256": "3e5a687c970b32656da1ee0da9d1ad5a7c97adf35009a2edb272ff455223ebb4",
+      "bytes": 260064
+    },
+    {
+      "name": "csv/ReturnLine.csv",
+      "sha256": "f0eb8778d1da18bae25a815cae20b27f8b394808780a6b1f1711277435e40db3",
+      "bytes": 626276
+    },
+    {
+      "name": "csv/ReturnPolicy.csv",
+      "sha256": "e7a78e5d26475f7f23f93335126f2a3bd1da37cd21dd619028b8cdc6a6a03775",
+      "bytes": 143
+    },
+    {
+      "name": "csv/ReturnRequest.csv",
+      "sha256": "ef480ea1321f9d29e4fc6dc54402fa2b622ee4ac7184b14d431ecbda51893a17",
+      "bytes": 437508
+    },
+    {
+      "name": "csv/ReturnShipment.csv",
+      "sha256": "f95f8bf5ce4b65a82cbf4d9bf291607f2a3f2e29b9931adac9f7505da4d2ce32",
+      "bytes": 368093
+    },
+    {
+      "name": "csv/SchemaVersion.csv",
+      "sha256": "411e2f7a2d93ba336a76861f19fcde5311824d7d099113e1408ff7db03326117",
+      "bytes": 10
+    },
+    {
+      "name": "csv/ShipmentLine.csv",
+      "sha256": "ec22fb0e95ef6a13763533e7154481e3619612df75d0971295978afec190502c",
+      "bytes": 326684
+    },
+    {
+      "name": "customer_profiles.json",
+      "sha256": "565f03df7808f01bd09083e779eb32ebeef41019c0fa0d2d206942105bcb678e",
+      "bytes": 708580
+    },
+    {
+      "name": "json/ActionAttempt.json",
+      "sha256": "fef1b9fc10c72f988da2599bd93a9bd4bdbdd3e38a510e4485fa11885e4faf68",
+      "bytes": 5426620
+    },
+    {
+      "name": "json/AuthorizationLine.json",
+      "sha256": "e5864c901bc81ff4dd4a0149edce9a875c102f445ccba506cea834d1bc6e1643",
+      "bytes": 814580
+    },
+    {
+      "name": "json/Customer.json",
+      "sha256": "07268660c2f119f606ac8dd5be6a867be78d8831b37d229a1e0168f15d3d9476",
+      "bytes": 1368580
+    },
+    {
+      "name": "json/EventLog.json",
+      "sha256": "04c039eae6a4705706491ed1f8eb943898a96ff0eb5a74cc2885518b9c744999",
+      "bytes": 182217181
+    },
+    {
+      "name": "json/IdSequence.json",
+      "sha256": "6c54897f662b9f1d56a9297c94b366983ae5fd1057ce84c9d628561b55a96a91",
+      "bytes": 752
+    },
+    {
+      "name": "json/Inspection.json",
+      "sha256": "855f29e830fde3de4e0da405cfadb4578c6f8a070c740de0fe24c29573f3c685",
+      "bytes": 907945
+    },
+    {
+      "name": "json/InventoryDisposition.json",
+      "sha256": "6bc2a55b2bb444e74a714d97f5146a2a7530a4ccdcea0331c5c06d42792fbc1e",
+      "bytes": 1212179
+    },
+    {
+      "name": "json/InventoryMovement.json",
+      "sha256": "b90078f24f9ce71e4e95749420aaa3c1ec1e861aae4bb292f9a734d164706408",
+      "bytes": 546344
+    },
+    {
+      "name": "json/Order.json",
+      "sha256": "e2d4ba7b1514558b854a2977f02f75621ceff57b3c59cb6145e99d8f8d0303b6",
+      "bytes": 5753976
+    },
+    {
+      "name": "json/OrderLine.json",
+      "sha256": "325bbacbf3da8a012efced88a968e5970bee68d3d3732f02d4a5ee718d92bf6a",
+      "bytes": 12317824
+    },
+    {
+      "name": "json/Product.json",
+      "sha256": "2d6c9245816bc08de5ace04b211c5b35815e0fb8ad82f6368125c36be8ec1bb7",
+      "bytes": 3706
+    },
+    {
+      "name": "json/Refund.json",
+      "sha256": "2e56ff86640bcbc4bd85c245edce1e91f6e163eba49467b44abba4aa0578793a",
+      "bytes": 1142922
+    },
+    {
+      "name": "json/RefundObligation.json",
+      "sha256": "2bb0331bac5bb7df3efc50154499c5b0dfa328d6dee8ee8a56cd391d894babad",
+      "bytes": 681363
+    },
+    {
+      "name": "json/ReturnAuthorization.json",
+      "sha256": "0643625687be65c0993cf9d2d22703bd04fb5313b0a7dd231bf70dcb5de71e76",
+      "bytes": 462500
+    },
+    {
+      "name": "json/ReturnLine.json",
+      "sha256": "21dc57357d56cd299605fc5b6f3ae5146b1eff709d96a8e59819f6b16aa7922c",
+      "bytes": 1466199
+    },
+    {
+      "name": "json/ReturnPolicy.json",
+      "sha256": "e7889ac90c57840b1a3ba299de7507777bf1fef76ae05780e5d50f05d46181e1",
+      "bytes": 165
+    },
+    {
+      "name": "json/ReturnRequest.json",
+      "sha256": "842102c2594273f38c2424d5080a7b577d0cdaa903d8d2180e48dc439f923932",
+      "bytes": 927442
+    },
+    {
+      "name": "json/ReturnShipment.json",
+      "sha256": "dffb8e9ebfdf1d621810ca63f5c88cfc5db45c79a5c9e0d2f4ebb60e42d90a5f",
+      "bytes": 657434
+    },
+    {
+      "name": "json/SchemaVersion.json",
+      "sha256": "a657367ce12f8be8981a8e89c36fb75e75356b4fd661d477ae4e0ac8f2090c5c",
+      "bytes": 16
+    },
+    {
+      "name": "json/ShipmentLine.json",
+      "sha256": "226d9c87b887a451d01e9c031ec24d618df3a11fd0e7c9380f46ce5232a64454",
+      "bytes": 891904
+    },
+    {
+      "name": "order_totals.json",
+      "sha256": "6f080dd0bd1ad56f4bd67cb7b023b2296a399fa7e5374d2b9eaf6f687bcc006c",
+      "bytes": 3591825
+    },
+    {
+      "name": "quantity_summary.json",
+      "sha256": "9edf6d108bf9e07ab482efc4156f717bd86b0a2d4b1084b93ae8b6267ddd865d",
+      "bytes": 1737229
+    },
+    {
+      "name": "schema.sql",
+      "sha256": "c7ffb3c8700150c713d6ed9ad0ac39fb25945eab64013804be820c6c71db1455",
+      "bytes": 81124
+    },
+    {
+      "name": "seed.sql",
+      "sha256": "a9f42632bbad372f6b88ce77534cfcd93fa7cedd0a97d38453631b38bbed2105",
+      "bytes": 94418077
+    },
+    {
+      "name": "source_manifest.json",
+      "sha256": "590ebcb991469c86ea4ddd3c174f2ef25f0ab2b0f4249cdd95219e24915258d2",
+      "bytes": 285
+    },
+    {
+      "name": "validation.json",
+      "sha256": "34907f11bc2a7835c582764b2ee30049c31f07b812c2c1d2a3c2a07bf6af1f73",
+      "bytes": 6028
+    },
+    {
+      "name": "validation.md",
+      "sha256": "7548a2dd326de51f35be6f396d5ee6df7ff3d2491ac3e8578694c226bb1aebbc",
+      "bytes": 3259
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "637e5bd426999e1f54176992ab24c18069a32003c9023228fd031d5735bbb573",
+      "bytes": 8385
+    }
+  ],
+  "manifest_listed_files_verified": 50,
+  "excluded": [
+    "returns.db",
+    "run_metadata.json"
+  ],
+  "screen_scope": "All bytes of all archive members screened for selected path/token/private-key patterns and local account name; limited screen, not a security guarantee.",
+  "original_data_unchanged": true
+}

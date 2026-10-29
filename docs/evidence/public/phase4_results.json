@@ -1,0 +1,165 @@
+[
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "quantity_negative"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 1,
+      "restocked_units": 0
+    },
+    "scenario_id": "quantity_control"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true,
+      "transition_rollback": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "excess_negative"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 100,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "excess_control"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "movement_rollback": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "inventory_negative"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 2
+    },
+    "scenario_id": "inventory_control"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "late_negative"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 2,
+      "restocked_units": 0
+    },
+    "scenario_id": "late_control"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true,
+      "transition_rollback": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 0,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "duplicate_negative"
+  },
+  {
+    "checks": {
+      "decision": true,
+      "effects": true,
+      "foreign_keys": true,
+      "reason": true,
+      "sqlite_integrity": true
+    },
+    "enforcement_pass": true,
+    "observed_effects": {
+      "paid_minor": 100,
+      "reserved_units": 0,
+      "restocked_units": 0
+    },
+    "scenario_id": "duplicate_control"
+  }
+]

@@ -1,0 +1,443 @@
+{
+  "starter_final": {
+    "status": "PASS",
+    "named_counts": [
+      300,
+      50,
+      80
+    ],
+    "manifest_file_count": 50,
+    "hashes": {
+      "catalog.json": "6b3ff173ff6ca1ffddac0fd345980109eee5d55f5cfa905a68d960360f996083",
+      "configuration.json": "83608e87b90288fd673dae8c40670405a19e79ae6da0092f27344d9e928bb790",
+      "csv/ActionAttempt.csv": "3bc438e7fe7f03df62d993798c90c07d35469d9fb6d162bf6045dc2a574ef80b",
+      "csv/AuthorizationLine.csv": "74b096fa1e7d09292096a352e4ea86471ff10107d08d2b81c365f74847251d2e",
+      "csv/Customer.csv": "e6ab75b98b7b5355e78e874816860edb0928d3fdcd567da85a3c2ba785f44eff",
+      "csv/EventLog.csv": "f8ffc9e0b7922020ffa6be7624e5fa56a636c10a1b903d2a935da670124d5003",
+      "csv/IdSequence.csv": "cb2dceee7096f340409300f8e2a7affa5d8f4fbffd3cbfaacada966ead278e6a",
+      "csv/Inspection.csv": "f26b94cea3242b5876a2fd950053ffeb2fd40cda6f4448cad9f737f809e9e2e7",
+      "csv/InventoryDisposition.csv": "161ad09e368743e85b53745f5eebfe6b5df5e2b673347bb3cd43560c8f927733",
+      "csv/InventoryMovement.csv": "f07060addccf4ffea43ce583c80dd1ac3fd39665aa2f974b886f53f8dca89b03",
+      "csv/Order.csv": "9b058ae4787522fdd617378c18db7d21075b3d87d51aa21b108cb894a2bbd446",
+      "csv/OrderLine.csv": "73982dcd6ebe7e86aab8651e2f7739e6558a9431d6c6a484d4576e05af1fc2ec",
+      "csv/Product.csv": "a9c98f8f71b225b653b226b6473738ded76fcbf102922e71c9491bf8592eee19",
+      "csv/Refund.csv": "f23b061532b45b67661d0419466b6a3a1532c2a874eda08cecdc4ff31980757c",
+      "csv/RefundObligation.csv": "000ce4350c23444511f471c6829d84ba1bc0c8458e46c8067e527efabd0dbb1d",
+      "csv/ReturnAuthorization.csv": "1e4d5bf66672331811a2c640c93620bb49c00458f94bfd2743c2586d2618bfa5",
+      "csv/ReturnLine.csv": "92647096dbe701100166122da8538eb4d0ec6d4f2cea972f2291a4eb6519bf50",
+      "csv/ReturnPolicy.csv": "e7a78e5d26475f7f23f93335126f2a3bd1da37cd21dd619028b8cdc6a6a03775",
+      "csv/ReturnRequest.csv": "eec8fd2c431be496fbb5ae03cca2425b93c5aabbed0e6207f13fab5005072e58",
+      "csv/ReturnShipment.csv": "2678d98035707d9645797bedfa8604b647baaa96f234659bea0c0f98e3b43042",
+      "csv/SchemaVersion.csv": "411e2f7a2d93ba336a76861f19fcde5311824d7d099113e1408ff7db03326117",
+      "csv/ShipmentLine.csv": "96a21fbc00216f3e058a7e7f5f6dcf99cc6e73f4c0364a9ed5a9beb9ab0b0e82",
+      "customer_profiles.json": "d5de65865e7a8045f431cbc645223b49545b1c2b083004c828e0c3ff80374acd",
+      "json/ActionAttempt.json": "31277d3cef87af634ff7f03a2fca9f4d340f5bb7866408c11878d0d7cb543278",
+      "json/AuthorizationLine.json": "6374992e7187327f41a8f1793d1f4d5f998f914201899248a38038c8a352a3db",
+      "json/Customer.json": "668dd20edeaecd46b010aa2de860514673c5d242b61fed26c94efcd7c9b73d2d",
+      "json/EventLog.json": "3c64ad63a02cae7a836ab587912a1e08d504f11a50e2652f83dcaf01e01d7b5a",
+      "json/IdSequence.json": "cb7b204a974ae77c44e1c2cf34608d927b1be7d4df1d456448bac4e03753339f",
+      "json/Inspection.json": "7367bed98b594d082d879ad797c86858de14e468d4d78c473e3ca5d48a8984c7",
+      "json/InventoryDisposition.json": "6977195fae773c078d7399b85018341e19e2a4088a1e5a34bc637c8e1c922b83",
+      "json/InventoryMovement.json": "291a2065a855ae33517c888604a125d480bd48899cbbdf9c27b41c9648c1814a",
+      "json/Order.json": "ac2a3312042ff11a9e86f05303e95112b90cdc748fd7eaccd41b31148ce50907",
+      "json/OrderLine.json": "571e7fcf4681f7fbee5223d3d1b4f075c0adf3f6c6e70cad2533193ae6398d23",
+      "json/Product.json": "2d6c9245816bc08de5ace04b211c5b35815e0fb8ad82f6368125c36be8ec1bb7",
+      "json/Refund.json": "6b34e87e39e58aa42f65be5f8c8e5dd6b75954c30d4366255e4be771b93eb0d1",
+      "json/RefundObligation.json": "b4de3e00e9c68f6ba219a6d68ac74d053086e4f9521bd789880eff9b3ad565f2",
+      "json/ReturnAuthorization.json": "bd243938d9aaed65e94b0e52edd6b113327d4221738a84022a9a8d87e5389937",
+      "json/ReturnLine.json": "de646d95934c4a1917fd5376c40e81e87f60f00fcc105b3e31adc8598ed7edcf",
+      "json/ReturnPolicy.json": "e7889ac90c57840b1a3ba299de7507777bf1fef76ae05780e5d50f05d46181e1",
+      "json/ReturnRequest.json": "4a3e8a36a08c2daf6110a9259f4e03cc2e816bdc50afa9462232c02712083c12",
+      "json/ReturnShipment.json": "f29d51b135370cab42e854974211f2d388e09868c82ac07d1c22020c06e57835",
+      "json/SchemaVersion.json": "a657367ce12f8be8981a8e89c36fb75e75356b4fd661d477ae4e0ac8f2090c5c",
+      "json/ShipmentLine.json": "ad997ab320bba58f441b87dcbe6f382364d115586762e488cdfc02fb2ec3d1e1",
+      "order_totals.json": "79a59ea39e38f3614e0481b1b96eff30e8cc9635eebb9ec6ff5c86e70d8d4337",
+      "quantity_summary.json": "8c1573198f8a05eeedb43a4ed1954c135844da77d468335b8138c81a11d33eef",
+      "schema.sql": "c7ffb3c8700150c713d6ed9ad0ac39fb25945eab64013804be820c6c71db1455",
+      "seed.sql": "55684f2ff72df9c80962793129f020e4dba9ab6776626d4dc7a735279724f53c",
+      "source_manifest.json": "ea6dbd8de3e95aa8406b7d36587493a3107df0a41f52090ac447e47df4ed2cf2",
+      "validation.json": "0bf6452f8e439626f10e195994d0c296b852191640861067dc91564945d4c2ac",
+      "validation.md": "5c624e0bd0ea285173f9513fb110bfacf2d4619caf601e9f40613f41e427fd37"
+    },
+    "csv_rows_compared": 4550,
+    "csv_mismatches": 0,
+    "json_table_mismatches": [],
+    "foreign_key_violation_count": 0,
+    "integrity_check": [
+      "ok"
+    ],
+    "validation_status": "PASS",
+    "metrics": {
+      "AGGREGATE_REQUEST_PROGRESS": {
+        "denominator": 50,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "AUTHORIZATION_MEMBERSHIP": {
+        "denominator": 56,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CALENDAR_AND_AS_OF": {
+        "denominator": 4032,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CROSS_ENTITY_DATES": {
+        "denominator": 438,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CUMULATIVE_RESERVATIONS": {
+        "denominator": 602,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "DISPOSITION_PREREQUISITES": {
+        "denominator": 48,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "DUPLICATE_SUCCESSFUL_PAYMENTS": {
+        "denominator": 33,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ELIGIBILITY_REPLAY": {
+        "denominator": 80,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EVENT_PROJECTIONS": {
+        "denominator": 1575,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EVENT_REPLAY": {
+        "denominator": 2883,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EXACT_CORE_COUNTS": {
+        "denominator": 3,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "FK_INTEGRITY": {
+        "denominator": 5356,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "IDENTIFIER_FORMATS": {
+        "denominator": 4532,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "INSPECTED_RECEIPT_LIMIT": {
+        "denominator": 53,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "LINE_FINANCIALS": {
+        "denominator": 602,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ORDER_DISCOUNT_ALLOCATION": {
+        "denominator": 300,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ORIGINAL_PAID_CEILING": {
+        "denominator": 602,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PENDING_REJECTED_EXCHANGE": {
+        "denominator": 50,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PHYSICAL_MOVEMENTS": {
+        "denominator": 45,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PK_UNIQUENESS": {
+        "denominator": 4532,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "QUANTITY_RECONCILIATION": {
+        "denominator": 80,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_BALANCES": {
+        "denominator": 37,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_ENTITLEMENTS": {
+        "denominator": 37,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_POSTING_PREREQUISITES": {
+        "denominator": 43,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REQUIRED_TYPES_ENUMS": {
+        "denominator": 82041,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SAME_ORDER": {
+        "denominator": 80,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SETTLEMENT_PREREQUISITES": {
+        "denominator": 29,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SHIPPED_ALLOCATION_LIMIT": {
+        "denominator": 56,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SQLITE_INTEGRITY": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "PASS"
+      }
+    },
+    "closure_hashes_match": true
+  },
+  "full_final": {
+    "status": "PASS",
+    "named_counts": [
+      30000,
+      5000,
+      8000
+    ],
+    "manifest_file_count": 50,
+    "hashes": {
+      "catalog.json": "1a58df9509c235daa76622bfd2fbe5d9a2ae2d7ae5d96ffb21f914d30737e645",
+      "configuration.json": "941111aa2e5b8d705b8571b56abf514732af598828f4f60d552139ee28768812",
+      "csv/ActionAttempt.csv": "ffdfa2732a16020c4bb6b90b9add0a8abb012100bcfbdaa7bec2c94d9d9c92fe",
+      "csv/AuthorizationLine.csv": "bcfe64d93841805466c0a35e03bef29a4b6ab0e3651e4d8d8eb1cfb6ed69097d",
+      "csv/Customer.csv": "9755d0fcba9f1e74a6f1ea8e6dbd97e330fc17ac894d9a4eecda4cab319bcb47",
+      "csv/EventLog.csv": "17ecb849331b894ffcbbd6fe0cfa73268c4a2771e8b04444795d7bb1c0ea807d",
+      "csv/IdSequence.csv": "74e36c524400bad5e432541c9d70273046499b585640624bb4d621ba1ac3e97b",
+      "csv/Inspection.csv": "a13e7aab63763724a8bfa2cad74621610d63d1aab775c9520f952c50992493b4",
+      "csv/InventoryDisposition.csv": "477ffd638c3757acf67a4de536567ab94ce24562ad33375c52f446245313d66a",
+      "csv/InventoryMovement.csv": "dc6ae7e966e1424664055a87e9d87684857cea2f09d99b2acfa66beaf1bb1db4",
+      "csv/Order.csv": "1b3ba6f0c6ec6bb6f62a533136e50348c1f6ded2552a2e961bf2af9b5d5426f4",
+      "csv/OrderLine.csv": "465d952b79e3320eed52184a1a87eec2130c4da0f9ed0220a8d527b9912b97e5",
+      "csv/Product.csv": "a9c98f8f71b225b653b226b6473738ded76fcbf102922e71c9491bf8592eee19",
+      "csv/Refund.csv": "3d1b91ff7467121f66cd3585b9c590dce3fc3aea11d90351ec4209d91cf129e7",
+      "csv/RefundObligation.csv": "ee7ac2d79ef2730b230fc06baf24283d1deb31a82260db836c6ae5bfcf035002",
+      "csv/ReturnAuthorization.csv": "3e5a687c970b32656da1ee0da9d1ad5a7c97adf35009a2edb272ff455223ebb4",
+      "csv/ReturnLine.csv": "f0eb8778d1da18bae25a815cae20b27f8b394808780a6b1f1711277435e40db3",
+      "csv/ReturnPolicy.csv": "e7a78e5d26475f7f23f93335126f2a3bd1da37cd21dd619028b8cdc6a6a03775",
+      "csv/ReturnRequest.csv": "ef480ea1321f9d29e4fc6dc54402fa2b622ee4ac7184b14d431ecbda51893a17",
+      "csv/ReturnShipment.csv": "f95f8bf5ce4b65a82cbf4d9bf291607f2a3f2e29b9931adac9f7505da4d2ce32",
+      "csv/SchemaVersion.csv": "411e2f7a2d93ba336a76861f19fcde5311824d7d099113e1408ff7db03326117",
+      "csv/ShipmentLine.csv": "ec22fb0e95ef6a13763533e7154481e3619612df75d0971295978afec190502c",
+      "customer_profiles.json": "565f03df7808f01bd09083e779eb32ebeef41019c0fa0d2d206942105bcb678e",
+      "json/ActionAttempt.json": "fef1b9fc10c72f988da2599bd93a9bd4bdbdd3e38a510e4485fa11885e4faf68",
+      "json/AuthorizationLine.json": "e5864c901bc81ff4dd4a0149edce9a875c102f445ccba506cea834d1bc6e1643",
+      "json/Customer.json": "07268660c2f119f606ac8dd5be6a867be78d8831b37d229a1e0168f15d3d9476",
+      "json/EventLog.json": "04c039eae6a4705706491ed1f8eb943898a96ff0eb5a74cc2885518b9c744999",
+      "json/IdSequence.json": "6c54897f662b9f1d56a9297c94b366983ae5fd1057ce84c9d628561b55a96a91",
+      "json/Inspection.json": "855f29e830fde3de4e0da405cfadb4578c6f8a070c740de0fe24c29573f3c685",
+      "json/InventoryDisposition.json": "6bc2a55b2bb444e74a714d97f5146a2a7530a4ccdcea0331c5c06d42792fbc1e",
+      "json/InventoryMovement.json": "b90078f24f9ce71e4e95749420aaa3c1ec1e861aae4bb292f9a734d164706408",
+      "json/Order.json": "e2d4ba7b1514558b854a2977f02f75621ceff57b3c59cb6145e99d8f8d0303b6",
+      "json/OrderLine.json": "325bbacbf3da8a012efced88a968e5970bee68d3d3732f02d4a5ee718d92bf6a",
+      "json/Product.json": "2d6c9245816bc08de5ace04b211c5b35815e0fb8ad82f6368125c36be8ec1bb7",
+      "json/Refund.json": "2e56ff86640bcbc4bd85c245edce1e91f6e163eba49467b44abba4aa0578793a",
+      "json/RefundObligation.json": "2bb0331bac5bb7df3efc50154499c5b0dfa328d6dee8ee8a56cd391d894babad",
+      "json/ReturnAuthorization.json": "0643625687be65c0993cf9d2d22703bd04fb5313b0a7dd231bf70dcb5de71e76",
+      "json/ReturnLine.json": "21dc57357d56cd299605fc5b6f3ae5146b1eff709d96a8e59819f6b16aa7922c",
+      "json/ReturnPolicy.json": "e7889ac90c57840b1a3ba299de7507777bf1fef76ae05780e5d50f05d46181e1",
+      "json/ReturnRequest.json": "842102c2594273f38c2424d5080a7b577d0cdaa903d8d2180e48dc439f923932",
+      "json/ReturnShipment.json": "dffb8e9ebfdf1d621810ca63f5c88cfc5db45c79a5c9e0d2f4ebb60e42d90a5f",
+      "json/SchemaVersion.json": "a657367ce12f8be8981a8e89c36fb75e75356b4fd661d477ae4e0ac8f2090c5c",
+      "json/ShipmentLine.json": "226d9c87b887a451d01e9c031ec24d618df3a11fd0e7c9380f46ce5232a64454",
+      "order_totals.json": "6f080dd0bd1ad56f4bd67cb7b023b2296a399fa7e5374d2b9eaf6f687bcc006c",
+      "quantity_summary.json": "9edf6d108bf9e07ab482efc4156f717bd86b0a2d4b1084b93ae8b6267ddd865d",
+      "schema.sql": "c7ffb3c8700150c713d6ed9ad0ac39fb25945eab64013804be820c6c71db1455",
+      "seed.sql": "a9f42632bbad372f6b88ce77534cfcd93fa7cedd0a97d38453631b38bbed2105",
+      "source_manifest.json": "590ebcb991469c86ea4ddd3c174f2ef25f0ab2b0f4249cdd95219e24915258d2",
+      "validation.json": "34907f11bc2a7835c582764b2ee30049c31f07b812c2c1d2a3c2a07bf6af1f73",
+      "validation.md": "7548a2dd326de51f35be6f396d5ee6df7ff3d2491ac3e8578694c226bb1aebbc"
+    },
+    "csv_rows_compared": 463617,
+    "csv_mismatches": 0,
+    "json_table_mismatches": [],
+    "foreign_key_violation_count": 0,
+    "integrity_check": [
+      "ok"
+    ],
+    "validation_status": "PASS",
+    "metrics": {
+      "AGGREGATE_REQUEST_PROGRESS": {
+        "denominator": 5000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "AUTHORIZATION_MEMBERSHIP": {
+        "denominator": 6414,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CALENDAR_AND_AS_OF": {
+        "denominator": 419297,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CROSS_ENTITY_DATES": {
+        "denominator": 45953,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "CUMULATIVE_RESERVATIONS": {
+        "denominator": 56882,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "DISPOSITION_PREREQUISITES": {
+        "denominator": 5454,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "DUPLICATE_SUCCESSFUL_PAYMENTS": {
+        "denominator": 4572,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ELIGIBILITY_REPLAY": {
+        "denominator": 8000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EVENT_PROJECTIONS": {
+        "denominator": 157137,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EVENT_REPLAY": {
+        "denominator": 298871,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "EXACT_CORE_COUNTS": {
+        "denominator": 3,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "FK_INTEGRITY": {
+        "denominator": 549798,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "IDENTIFIER_FORMATS": {
+        "denominator": 463599,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "INSPECTED_RECEIPT_LIMIT": {
+        "denominator": 6281,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "LINE_FINANCIALS": {
+        "denominator": 56882,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ORDER_DISCOUNT_ALLOCATION": {
+        "denominator": 30000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "ORIGINAL_PAID_CEILING": {
+        "denominator": 56882,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PENDING_REJECTED_EXCHANGE": {
+        "denominator": 5000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PHYSICAL_MOVEMENTS": {
+        "denominator": 5106,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "PK_UNIQUENESS": {
+        "denominator": 463599,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "QUANTITY_RECONCILIATION": {
+        "denominator": 8000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_BALANCES": {
+        "denominator": 4812,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_ENTITLEMENTS": {
+        "denominator": 4812,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REFUND_POSTING_PREREQUISITES": {
+        "denominator": 5281,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "REQUIRED_TYPES_ENUMS": {
+        "denominator": 8458552,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SAME_ORDER": {
+        "denominator": 8000,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SETTLEMENT_PREREQUISITES": {
+        "denominator": 4116,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SHIPPED_ALLOCATION_LIMIT": {
+        "denominator": 6414,
+        "numerator": 0,
+        "status": "PASS"
+      },
+      "SQLITE_INTEGRITY": {
+        "denominator": 1,
+        "numerator": 0,
+        "status": "PASS"
+      }
+    },
+    "closure_hashes_match": true
+  },
+  "full_repeat_hashes": {
+    "files": 50,
+    "match_closure": true,
+    "match_full_final": true,
+    "match_manifest": true
+  },
+  "evidence_scope": "Selected summary of the executed Phase 5 audit; full raw records remain local. This is inherited evidence, not a new full generation."
+}

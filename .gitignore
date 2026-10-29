@@ -1,0 +1,37 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+*.egg-info/
+outputs/
+tmp/
+.env
+.env.*
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Private originals, local preparation tools and duplicate output packages.
+/submission/
+/prompts/
+/docs/sources/
+/scripts/*.py
+!/scripts/phase4_scenarios.py
+!/scripts/phase4_validate.py
+/docs/evidence/*
+!/docs/evidence/public/
+
+# Historical originals stay local; publish the reviewed docs/project copies.
+/docs/*.md
+!/docs/data_dictionary.md
+!/docs/ai_prompt_history.md
+!/docs/ai_usage_disclosure.md
+!/docs/final_submission_report.md
+
+# Only the one reviewed canonical archive belongs in this repository.
+*.zip
+!/artifacts/full/yotaflex-full-20261022.zip

@@ -1,0 +1,131 @@
+{
+  "as_of": "2026-10-22T00:00:00Z",
+  "catalog_size": 40,
+  "categories": {
+    "CLOTHING": {
+      "max_price_minor": 12000,
+      "min_price_minor": 1500,
+      "returnable": true,
+      "weight": 35,
+      "window_days": 30
+    },
+    "ELECTRONICS": {
+      "max_price_minor": 90000,
+      "min_price_minor": 12000,
+      "returnable": true,
+      "weight": 15,
+      "window_days": 15
+    },
+    "FOOTWEAR": {
+      "max_price_minor": 25000,
+      "min_price_minor": 3500,
+      "returnable": true,
+      "weight": 25,
+      "window_days": 45
+    },
+    "HOME": {
+      "max_price_minor": 18000,
+      "min_price_minor": 1000,
+      "returnable": true,
+      "weight": 20,
+      "window_days": 30
+    },
+    "PERSONAL_CARE": {
+      "max_price_minor": 8000,
+      "min_price_minor": 500,
+      "returnable": false,
+      "weight": 5,
+      "window_days": 30
+    }
+  },
+  "config_version": 1,
+  "coverage_strata": true,
+  "currency": "INR",
+  "customers_per_order_divisor": 3,
+  "damage_condition_weights": {
+    "IRREPARABLE": 25,
+    "REPAIRABLE": 60,
+    "UNSAFE": 15
+  },
+  "exchange_percent": 12,
+  "failed_payment_percent": 10,
+  "fee_bps": 0,
+  "line_discount_bps": [
+    0,
+    0,
+    0,
+    500,
+    1000,
+    1500
+  ],
+  "order_discount_bps": [
+    0,
+    0,
+    0,
+    500,
+    1000
+  ],
+  "order_line_weights": {
+    "1": 45,
+    "2": 30,
+    "3": 20,
+    "4": 5
+  },
+  "ordinary_condition_weights": {
+    "IRREPARABLE": 3,
+    "REPAIRABLE": 7,
+    "SELLABLE": 90
+  },
+  "override_supported": false,
+  "policy_timezone": "Asia/Calcutta",
+  "quantity_weights": {
+    "1": 55,
+    "2": 25,
+    "3": 15,
+    "4": 5
+  },
+  "regions": [
+    "NORTH",
+    "SOUTH",
+    "EAST",
+    "WEST"
+  ],
+  "request_modes": {
+    "DAMAGE": 6,
+    "LATE": 8,
+    "MISSING": 5,
+    "NORMAL": 58,
+    "PENDING_INSPECTION": 5,
+    "PENDING_MOVEMENT": 4,
+    "PENDING_REFUND": 4,
+    "PENDING_REQUEST": 5,
+    "PENDING_SHIPMENT": 5
+  },
+  "return_reason_weights": {
+    "CHANGED_MIND": 30,
+    "DAMAGE": 10,
+    "NOT_AS_EXPECTED": 20,
+    "SIZE": 40
+  },
+  "scales": {
+    "full": {
+      "orders": 30000,
+      "requests": 5000,
+      "return_lines": 8000
+    },
+    "starter": {
+      "orders": 300,
+      "requests": 50,
+      "return_lines": 80
+    }
+  },
+  "seed": 20261022,
+  "segments": {
+    "LOYAL": 8,
+    "OCCASIONAL": 1,
+    "REGULAR": 3
+  },
+  "split_shipment_percent": 15,
+  "tax_bps": 0,
+  "window_days": 30
+}
